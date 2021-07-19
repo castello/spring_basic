@@ -35,4 +35,4 @@
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
 **Linux** - https://www.jetbrains.com/idea/download/#section=linux  
 
-- VS Code 설치
+- VS Code 설치 - https://code.visualstudio.com/download
