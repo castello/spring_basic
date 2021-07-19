@@ -5,8 +5,8 @@
 ### 1. 개요
 
 ### 2. 설치 & 설정
-- git 설치 - https://git-scm.com/downloads 
-- SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
+1. git 설치 - https://git-scm.com/downloads 
+2. SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
   $ curl -s "https://get.sdkman.io" | bash  
   $ source "$HOME/.sdkman/bin/sdkman-init.sh" 
 
@@ -28,16 +28,16 @@
   [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - Windows 10   
   [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - MacOS
 
-- Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
+3. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
   버전별 비교    - https://tomcat.apache.org/whichversion.html
   
-- STS, IntelliJ 설치    
-1. **STS 3.9.17**  
+4. STS, IntelliJ 설치    
+- **STS 3.9.17**  
 **Windows** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-win32-x86_64.zip  
 **MacOS** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-macosx-cocoa-x86_64.dmg  
 **Linux** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-linux-gtk-x86_64.tar.gz  
 
-2. **IntelliJ**   
+- **IntelliJ**   
 **Windows** - https://www.jetbrains.com/idea/download/#section=windows  
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
 **Linux** - https://www.jetbrains.com/idea/download/#section=linux  
