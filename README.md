@@ -26,10 +26,10 @@
   
   [참고] SDKMAN없이 JDK직접 설치  
   Windows 10 - [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4)   
-  MacOS        [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4)
+  MacOS      - [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4)
 
 - Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
-  버전별 비교 - https://tomcat.apache.org/whichversion.html
+  버전별 비교    - https://tomcat.apache.org/whichversion.html
   
 - STS, IntelliJ 설치    
 1. **STS 3.9.17**  
