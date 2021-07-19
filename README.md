@@ -7,7 +7,7 @@
 # Part1. Spring 시작하기
 ## 1. 개요    
   - ### Spring이란?  
-    Spring makes it easy to create Java enterprise applications.  
+    Spring makes it easy to create Java **enterprise** applications.  
     https://docs.spring.io/spring-framework/docs/current/reference/html/overview.html#spring-introduction  
   - ### Spring MVC란?  
     A Spring MVC is a framework to build web applications. It follows the MVC(Model-View-Controller) design pattern.
