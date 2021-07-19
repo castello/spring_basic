@@ -7,7 +7,10 @@
 ### 2. 설치 & 설정
 - git 설치 - https://git-scm.com/downloads 
 - SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
-  $ curl -s "https://get.sdkman.io" | bash <--- sdkman 설치. [not found zip에러발생시]  
+  $ curl -s "https://get.sdkman.io" | bash <--- sdkman 설치. 
+  [참고] 설치 중 not found zip에러 발생시, https://sourceforge.net/projects/gnuwin32/files/zip/3.0/ 에 방문헤서 zip-3.0-bin.zip를 
+        그리고 https://sourceforge.net/projects/gnuwin32/files/bzip2/1.0.5/ 에서 bzip2-1.0.5-bin.zip이라는 파일을 다운
+  
   $ source "$HOME/.sdkman/bin/sdkman-init.sh" <--- sdkman 설정
   
   $ sdk version  <--- sdkman 버전출력  
