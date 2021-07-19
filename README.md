@@ -7,8 +7,8 @@
 ### 2. 설치 & 설정
 - git 설치 - https://git-scm.com/downloads 
 - SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
-  $ curl -s "https://get.sdkman.io" | bash    
-  $ source "$HOME/.sdkman/bin/sdkman-init.sh"  
+  $ curl -s "https://get.sdkman.io" | bash <--- sdkman 설치   
+  $ source "$HOME/.sdkman/bin/sdkman-init.sh" <--- sdkman 설정
   
   $ sdk version  <--- sdkman 버전출력  
   $ sdk java list  <-- 설치 가능 & 설치된 JDK목록  
