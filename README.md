@@ -7,13 +7,13 @@
 ### 2. 설치 & 설정
 - git 설치 - https://git-scm.com/downloads 
 - SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
-  $ curl -s "https://get.sdkman.io" | bash <--- sdkman 설치.  
+  $ curl -s "https://get.sdkman.io" | bash 
   
   **[참고]** Windows에서 설치 중 not found zip에러 발생시, https://sourceforge.net/projects/gnuwin32/files/zip/3.0/ 에서 zip-3.0-bin.zip를  
         그리고 https://sourceforge.net/projects/gnuwin32/files/bzip2/1.0.5/ 에서 bzip2-1.0.5-bin.zip이라는 파일을 다운
         두개의 파일을 압축 해제 후, zip.exe 그리고 bzip2.dll 파일을 'git설치폴더/usr/bin' 폴더에 넣어준다.  
   
-  $ source "$HOME/.sdkman/bin/sdkman-init.sh" <--- sdkman 설정
+  $ source "$HOME/.sdkman/bin/sdkman-init.sh" 
   
   $ sdk version  <--- sdkman 버전출력  
   $ sdk java list  <-- 설치 가능 & 설치된 JDK목록  
