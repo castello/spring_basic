@@ -41,7 +41,7 @@
 3. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
   버전별 비교    - https://tomcat.apache.org/whichversion.html
   
-4. STS, IntelliJ 설치    
+4. STS, IntelliJ 설치   
 - **STS 3.9.17**  
 **Windows** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-win32-x86_64.zip  
 **MacOS** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-macosx-cocoa-x86_64.dmg  
@@ -52,4 +52,12 @@
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
 **Linux** - https://www.jetbrains.com/idea/download/#section=linux  
 
-5. VS Code 설치 - https://code.visualstudio.com/download
+
+5. VS Code 설치 - https://code.visualstudio.com/download  
+  - 유용한 플러그인  
+  한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko  
+  Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode  
+
+  
+  
+
