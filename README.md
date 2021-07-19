@@ -5,7 +5,7 @@
 ### 1. 개요
 
 ### 2. 설치 & 설정
-- git 설치 - https://git-scm.com/download/win  
+- git 설치 - https://git-scm.com/downloads 
 - SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
   $ curl -s "https://get.sdkman.io" | bash    
   $ source "$HOME/.sdkman/bin/sdkman-init.sh"  
