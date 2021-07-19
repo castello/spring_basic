@@ -1,5 +1,5 @@
 # 남궁성의 Spring framework 강좌 - 기본편
-sponsored by fastcampus.co.kr
+> sponsored by fastcampus.co.kr
 
 
 
