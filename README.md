@@ -1,5 +1,5 @@
 > # 남궁성의 Spring framework 강좌 - 기본편
-> Spring입문자를 위한 최고의 강좌.  https://fastcampus.co.kr/                
+> Spring 입문자를 위한 최고의 강좌.  https://fastcampus.co.kr/                
 > email : castello@naver.com  
 # Part1. Spring 시작하기
 ## 1. 개요    
