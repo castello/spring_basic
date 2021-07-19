@@ -25,8 +25,8 @@
 
   
   [참고] SDKMAN없이 JDK직접 설치할 때는 아래의 동영상을 참고하세요.  
-  Windows 10 - [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4)   
-  MacOS      - [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4)
+  [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - Windows 10   
+  [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - MacOS
 
 - Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
   버전별 비교    - https://tomcat.apache.org/whichversion.html
