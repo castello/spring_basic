@@ -1,4 +1,4 @@
-# 남궁성의 Spring framework 기본 강좌 @fastcampus.co.kr
+## 남궁성의 Spring framework 기본 강좌
 
 Part1. 스프링 프레임웍 시작하기 
 1. 개요
