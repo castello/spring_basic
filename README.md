@@ -1,13 +1,16 @@
 > # 남궁성의 Spring framework 강좌 - 기본편
 > Spring 입문자를 위한 최고의 강좌.  https://fastcampus.co.kr/                
+> Spring framework 강좌 - 심화편(준비중)  
+> Spring boot 강좌 - 기본편(준비중), 심화편(준비중)  
 > email : castello@naver.com  
+
 # Part1. Spring 시작하기
 ## 1. 개요    
   - ### Spring이란?  
     Spring makes it easy to create Java enterprise applications.  
     https://docs.spring.io/spring-framework/docs/current/reference/html/overview.html#spring-introduction  
   - ### Spring MVC란?  
-    A Spring MVC is a framework in Java to build web applications. It follows the MVC(Model-View-Controller) design pattern.
+    A Spring MVC is a framework to build web applications. It follows the MVC(Model-View-Controller) design pattern.
     https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/mvc.html  
 
 ## 2. 설치 & 설정  
