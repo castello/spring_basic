@@ -27,7 +27,7 @@
    **[참고]** Windows에서 설치 중 not found zip에러 발생시, 
         https://sourceforge.net/projects/gnuwin32/files/zip/3.0/ 에서 zip-3.0-bin.zip,    
         https://sourceforge.net/projects/gnuwin32/files/bzip2/1.0.5/ 에서 bzip2-1.0.5-bin.zip을 다운로드  
-        압축 해제 후, zip.exe와 bzip2.dll을 'git설치폴더/usr/bin' 폴더에 넣어줍니다.  
+        압축 해제 후, zip.exe와 bzip2.dll을 'git설치폴더\bin' 폴더(예:C:\Program Files\Git\bin)에 넣어줍니다.  
   
     $ sdk version  <--- sdkman 버전출력  
     $ sdk java list  <-- 설치 가능 & 설치된 JDK목록  
