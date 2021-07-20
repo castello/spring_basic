@@ -3,7 +3,7 @@
 > Spring framework 강좌 - 심화편(준비중)  
 > Spring boot 강좌 - 기본편(준비중), 심화편(준비중)  
 > email : seong.namkung@gmail.com    
-
+<br>
 
 # Part1. Spring 시작하기
 ## 1. 개요    
@@ -15,7 +15,7 @@
     A Spring MVC is a framework to build web applications. It follows the MVC(Model-View-Controller) design pattern.
     https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/mvc.html  
     [참고] MVC패턴이란? https://developer.mozilla.org/ko/docs/Glossary/MVC  
-
+<br>
 
 ## 2. 설치 & 설정  
 
