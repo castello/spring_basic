@@ -2,7 +2,7 @@
 > Spring 입문자를 위한 최고의 강좌.  https://fastcampus.co.kr/                
 > Spring framework 강좌 - 심화편(준비중)  
 > Spring boot 강좌 - 기본편(준비중), 심화편(준비중)  
-> email : castello@naver.com  
+> email : seong.namkung@gmail.com    
 
 # Part1. Spring 시작하기
 ## 1. 개요    
