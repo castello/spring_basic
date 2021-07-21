@@ -31,7 +31,7 @@
            $ git --version  
            git version 2.28.0  
 
-    위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.
+    위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.  
     <br>
 2. SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
     ```
@@ -57,6 +57,7 @@
             [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - Windows 10   
             [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - MacOS
 <br>
+
 3. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
   [Windows] https://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50-windows-x64.zip  
   [Mac] https://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50.tar.gz  
@@ -78,8 +79,8 @@
 - **IntelliJ**   
 **Windows** - https://www.jetbrains.com/idea/download/#section=windows  
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
-
 <br>
+
 5. VS Code 설치 - https://code.visualstudio.com/download  
   - 유용한 플러그인  
   한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko  
