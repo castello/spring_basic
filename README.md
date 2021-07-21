@@ -52,7 +52,7 @@
     $ echo $JAVA_HOME <--- JAVA_HOME으로 지정된 경로 출력  
     $ sdk uninstall java 버전  <--- 지정된 버전의 자바를 uninstall  
 
-  
+    **[참고]** SDKMAN사용하지 않고 openjdk직접 다운 링크 - https://github.com/ojdkbuild/ojdkbuild  
     **[참고]** SDKMAN없이 JDK직접 설치할 때는 아래의 동영상을 참고하세요.  
             [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - Windows 10   
             [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - MacOS
