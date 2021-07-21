@@ -18,7 +18,7 @@
     **[참고]** MVC패턴이란? https://developer.mozilla.org/ko/docs/Glossary/MVC  
 <br>
 
-## 2. 개발도구 설치 & 설정  
+## 2. 개발 도구 설치 & 설정  
 
 1. git 설치 - https://git-scm.com/downloads   
   
@@ -71,7 +71,7 @@
    **[참고]** 버전별 비교    - https://tomcat.apache.org/whichversion.html  
   <br>
     
-  ### Tomcat의 실행과 종료  
+  **Tomcat의 실행과 종료**  
   [Windows]  
   ```
   > cd C:\apache-tomcat-9.0.50\bin
