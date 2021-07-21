@@ -68,7 +68,8 @@
         $ tar -xvf apache-tomcat-9.0.50.tar.gz -C ~  
     ```
 
-   **[참고]** 버전별 비교    - https://tomcat.apache.org/whichversion.html  
+   **[참고]** 버전별 비교 - https://tomcat.apache.org/whichversion.html  
+   **[참고]** RFC(Request For Comments) - https://ko.wikipedia.org/wiki/RFC  
    **[참고]** JSR(Java Specification Request) - https://jcp.org/en/jsr/overview  
    **[참고]** JCP(Java Community Process) - https://jcp.org/en/procedures/overview  
   <br>
