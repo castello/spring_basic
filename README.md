@@ -57,6 +57,14 @@
             [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - MacOS
 
 3. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
+  [Windows] https://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50-windows-x64.zip  
+  [Mac] https://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50.tar.gz  
+        다운로드 받은 파일을 설치하고자하는 디렉토리로 이동후 아래의 명령을 실행. 압축을 풀어서 사용자의 홈디렉토리(~)에 저장.
+        ```
+        $ tar -xvf apache-tomcat-9.0.50.tar.gz -C ~
+        ```
+  
+
   버전별 비교    - https://tomcat.apache.org/whichversion.html
   
 4. STS, IntelliJ 설치   
