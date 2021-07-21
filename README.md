@@ -69,6 +69,8 @@
     ```
 
    **[참고]** 버전별 비교    - https://tomcat.apache.org/whichversion.html  
+   **[참고]** JSR(Java Specification Request) - https://jcp.org/en/jsr/overview  
+   **[참고]** JCP(Java Community Process) - https://jcp.org/en/procedures/overview  
   <br>
     
   **Tomcat의 실행과 종료**  
