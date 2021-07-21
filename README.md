@@ -72,6 +72,7 @@
    **[참고]** RFC(Request For Comments) - https://ko.wikipedia.org/wiki/RFC  
    **[참고]** JSR(Java Specification Request) - https://jcp.org/en/jsr/overview  
    **[참고]** JCP(Java Community Process) - https://jcp.org/en/procedures/overview  
+              https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0_%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4  
   <br>
     
   **Tomcat의 실행과 종료**  
