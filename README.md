@@ -79,7 +79,7 @@
   > shutdown.bat
   ```
  
-  [Mac]  
+  [Mac]
   ```
   $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
   $ ./startup.sh  <--- tomcat실행  
