@@ -19,7 +19,19 @@
 
 ## 2. 설치 & 설정  
 
-1. git 설치 - https://git-scm.com/downloads 
+1. git 설치 - https://git-scm.com/downloads   
+  
+    [MacOS] 먼저 terminal열고, 아래와 같이 입력하고 엔터치세요.   
+
+           $ git
+           
+     git명령어는... 도구를 설치하시겠습니까?라고 묻는 창이 열리면 '설치'를 클릭.(몇분 소요) 설치 완료 후, 아래와 같이 입력후 엔터.
+           
+           $ git --version  
+           git version 2.28.0  
+
+    위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.
+
 2. SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
       $ curl -s "https://get.sdkman.io" | bash  
       $ source "$HOME/.sdkman/bin/sdkman-init.sh" 
