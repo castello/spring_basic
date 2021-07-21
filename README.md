@@ -70,6 +70,22 @@
 
    **[참고]** 버전별 비교    - https://tomcat.apache.org/whichversion.html  
   <br>
+    
+  ### Tomcat의 실행과 종료  
+  [Windows]  
+  ```
+  > cd C:\apache-tomcat-9.0.50\bin
+  > startup.bat
+  > shutdown.bat
+  ```
+ 
+  [Mac]  
+  ```
+  $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
+  $ ./startup.sh  <--- tomcat실행  
+  $ ./shutdown.sh <--- tomcat종료   
+  ```
+  
   
 4. STS, IntelliJ 설치   
 - **STS 3.9.17**  
