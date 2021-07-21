@@ -34,8 +34,8 @@
 
 2. SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
     ```
-    $ curl -s "https://get.sdkman.io" | bash  
-    $ source "$HOME/.sdkman/bin/sdkman-init.sh" 
+      $ curl -s "https://get.sdkman.io" | bash  
+      $ source "$HOME/.sdkman/bin/sdkman-init.sh" 
     ```
 
    **[참고]** Windows에서 설치 중 not found zip에러 발생시, 
