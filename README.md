@@ -18,7 +18,7 @@
     **[참고]** MVC패턴이란? https://developer.mozilla.org/ko/docs/Glossary/MVC  
 <br>
 
-## 2. 설치 & 설정  
+## 2. 개발도구 설치 & 설정  
 
 1. git 설치 - https://git-scm.com/downloads   
   
