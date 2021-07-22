@@ -90,21 +90,18 @@
     
    **Tomcat의 실행과 종료**  
        [Windows]  
-   ```
-    > cd C:\apache-tomcat-9.0.50\bin  
-    > startup.bat  
-    > shutdown.bat  
-   ```
+        ```
+        > cd C:\apache-tomcat-9.0.50\bin
+        > startup.bat
+        > shutdown.bat
+        ```
  <br>
-       [Mac]  
-
-
-   ```  
-    $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
-    $ ./startup.sh <--- tomcat 실행
-    $ ./shutdown.sh <--- tomcat 종료
-   ```
-  <br>
+       [Mac]
+        ```
+        $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
+        $ ./startup.sh  <--- tomcat실행  
+        $ ./shutdown.sh <--- tomcat종료   
+        ```
   <br>
   
 5. STS, IntelliJ 설치   
