@@ -22,16 +22,19 @@
 
 1. JDK11 설치. 
 
-**[Windows]**  
- ![java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip]https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.11.9-1/java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip
+[Windows] https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.11.9-1/java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip
 
-**[Mac]**
-- https://sdkman.io/install  
-    ```
-      $ curl -s "https://get.sdkman.io" | bash  
-      $ source "$HOME/.sdkman/bin/sdkman-init.sh" 
-    ```
-   
+[Mac] SDKMAN을 이용해서 openJDK설치
+
+   - SDKMAN 설치 - https://sdkman.io/install  
+
+   ```
+    $ curl -s "https://get.sdkman.io" | bash
+    $ source "$HOME/.sdkman/bin/sdkman-init.sh"    
+   ```
+
+   - SDKMAN 명령어  
+   ```
     $ sdk version  <--- sdkman 버전출력  
     $ sdk java list  <-- 설치 가능 & 설치된 JDK목록  
     $ sdk install Identifier <--- 지정된 JDK설치(Identifier대신 8.292.10.1-amzn와 같이 원하는 종류와 버전 지정)  
@@ -39,10 +42,12 @@
     $ sdk use java 버전 <--- 현재 사용중인 java버전을 지정된 버젼으로 변경  
     $ echo $JAVA_HOME <--- JAVA_HOME으로 지정된 경로 출력  
     $ sdk uninstall java 버전  <--- 지정된 버전의 자바를 uninstall  
-
+   ```
+   **[참고]** openJDK버전별 다운로드 - https://jdk.java.net/archive/
+<br>
 <br>
 
-3. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
+2. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
   [Windows] https://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50-windows-x64.zip  
   [Mac] https://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50.tar.gz  
         <br>
@@ -59,23 +64,23 @@
               https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0_%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4  
   <br>
     
-  **Tomcat의 실행과 종료**  
-  [Windows]  
-  ```
-  > cd C:\apache-tomcat-9.0.50\bin
-  > startup.bat
-  > shutdown.bat
-  ```
- 
-  [Mac]
-  ```
-  $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
-  $ ./startup.sh  <--- tomcat실행  
-  $ ./shutdown.sh <--- tomcat종료   
-  ```
+   **Tomcat의 실행과 종료**  
+       [Windows]  
+        ```
+        > cd C:\apache-tomcat-9.0.50\bin
+        > startup.bat
+        > shutdown.bat
+        ```
+ <br>
+       [Mac]
+        ```
+        $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
+        $ ./startup.sh  <--- tomcat실행  
+        $ ./shutdown.sh <--- tomcat종료   
+        ```
+  <br>
   
-  
-4. STS, IntelliJ 설치   
+3. STS, IntelliJ 설치   
 - **STS 3.9.17**  
 **Windows** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-win32-x86_64.zip  
 **MacOS** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-macosx-cocoa-x86_64.dmg  
@@ -85,15 +90,15 @@
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
 <br>
 
-5. VS Code 설치 - https://code.visualstudio.com/download  
+4. VS Code 설치 - https://code.visualstudio.com/download  
   - 유용한 플러그인  
   한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko  
   open in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser  
   Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode  
   indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow  
+<br>
 
-
-6. git 설치  
+5. git 설치  
     [Windows] https://git-scm.com/download/win      
   
     [Mac] 먼저 terminal열고, 아래와 같이 입력하고 엔터치세요.   
