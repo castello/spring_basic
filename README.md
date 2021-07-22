@@ -46,9 +46,9 @@
   
 3. JDK11 설치. 
 
-    [Windows] https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.11.9-1/java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip
+[Windows] https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.11.9-1/java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip
 
-    [Mac] SDKMAN을 이용해서 openJDK설치
+[Mac] SDKMAN을 이용해서 openJDK설치
 
    - SDKMAN 설치 - https://sdkman.io/install  
 
