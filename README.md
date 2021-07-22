@@ -20,7 +20,30 @@
 
 ## 2. 개발 도구 설치 & 설정  
 
-1. JDK11 설치. 
+1. VS Code 설치 - https://code.visualstudio.com/download  
+  - 유용한 플러그인  
+  한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko  
+  open in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser  
+  Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode  
+  indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow  
+<br>
+
+2. git 설치  
+    [Windows] https://git-scm.com/download/win      
+  
+    [Mac] 먼저 terminal열고, 아래와 같이 입력하고 엔터치세요.   
+
+           $ git
+           
+     'git'명령어는... 도구를 설치하시겠습니까?라고 묻는 창이 열리면 '설치'를 클릭.(몇분 소요) 설치 완료 후, 아래와 같이 입력후 엔터.
+           
+           $ git --version  
+           git version 2.28.0  
+
+    위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.  
+    <br>
+
+3. JDK11 설치. 
 
 [Windows] https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.11.9-1/java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip
 
@@ -47,7 +70,7 @@
 <br>
 <br>
 
-2. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
+4. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
   [Windows] https://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50-windows-x64.zip  
   [Mac] https://mirror.navercorp.com/apache/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50.tar.gz  
         <br>
@@ -80,7 +103,7 @@
         ```
   <br>
   
-3. STS, IntelliJ 설치   
+5. STS, IntelliJ 설치   
 - **STS 3.9.17**  
 **Windows** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-win32-x86_64.zip  
 **MacOS** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-macosx-cocoa-x86_64.dmg  
@@ -90,28 +113,6 @@
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
 <br>
 
-4. VS Code 설치 - https://code.visualstudio.com/download  
-  - 유용한 플러그인  
-  한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko  
-  open in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser  
-  Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode  
-  indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow  
-<br>
-
-5. git 설치  
-    [Windows] https://git-scm.com/download/win      
-  
-    [Mac] 먼저 terminal열고, 아래와 같이 입력하고 엔터치세요.   
-
-           $ git
-           
-     'git'명령어는... 도구를 설치하시겠습니까?라고 묻는 창이 열리면 '설치'를 클릭.(몇분 소요) 설치 완료 후, 아래와 같이 입력후 엔터.
-           
-           $ git --version  
-           git version 2.28.0  
-
-    위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.  
-    <br>
   
   
 
