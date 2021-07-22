@@ -42,12 +42,13 @@
 
     위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.  
     <br>
+    <br>
 
-3. JDK11 설치. 
+3. JDK11 설치 
 
-[Windows] https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.11.9-1/java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip
+    [Windows] https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.11.9-1/java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip
 
-[Mac] SDKMAN을 이용해서 openJDK설치
+    [Mac] SDKMAN을 이용해서 openJDK설치
 
    - SDKMAN 설치 - https://sdkman.io/install  
 
@@ -89,19 +90,24 @@
     
    **Tomcat의 실행과 종료**  
        [Windows]  
-        ```
+
+
+   ```
         > cd C:\apache-tomcat-9.0.50\bin
         > startup.bat
         > shutdown.bat
-        ```
+   ```  
  <br>
-       [Mac]
-        ```
+ 
+   [Mac]
+ 
+ ```
         $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
         $ ./startup.sh  <--- tomcat실행  
         $ ./shutdown.sh <--- tomcat종료   
-        ```
-  <br>
+   ```
+  <br>  
+  <br>  
   
 5. STS, IntelliJ 설치   
 - **STS 3.9.17**  
