@@ -20,30 +20,18 @@
 
 ## 2. 개발 도구 설치 & 설정  
 
-1. git 설치 - https://git-scm.com/downloads   
-  
-    [Mac] 먼저 terminal열고, 아래와 같이 입력하고 엔터치세요.   
+1. JDK11 설치. 
 
-           $ git
-           
-     'git'명령어는... 도구를 설치하시겠습니까?라고 묻는 창이 열리면 '설치'를 클릭.(몇분 소요) 설치 완료 후, 아래와 같이 입력후 엔터.
-           
-           $ git --version  
-           git version 2.28.0  
+**[Windows]**  
+ ![java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip]https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.11.9-1/java-11-openjdk-11.0.11.9-1.windows.ojdkbuild.x86_64.zip
 
-    위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.  
-    <br>
-2. SDKMAN을 이용한 JDK1.8 설치 - https://sdkman.io/install  
+**[Mac]**
+- https://sdkman.io/install  
     ```
       $ curl -s "https://get.sdkman.io" | bash  
       $ source "$HOME/.sdkman/bin/sdkman-init.sh" 
     ```
-
-   **[참고]** Windows에서 설치 중 not found zip에러 발생시, 
-        https://sourceforge.net/projects/gnuwin32/files/zip/3.0/ 에서 zip-3.0-bin.zip,    
-        https://sourceforge.net/projects/gnuwin32/files/bzip2/1.0.5/ 에서 bzip2-1.0.5-bin.zip을 다운로드  
-        압축 해제 후, zip.exe와 bzip2.dll을 'git설치폴더\bin' 폴더(예:C:\Program Files\Git\bin)에 넣어줍니다.  
-  
+   
     $ sdk version  <--- sdkman 버전출력  
     $ sdk java list  <-- 설치 가능 & 설치된 JDK목록  
     $ sdk install Identifier <--- 지정된 JDK설치(Identifier대신 8.292.10.1-amzn와 같이 원하는 종류와 버전 지정)  
@@ -52,10 +40,6 @@
     $ echo $JAVA_HOME <--- JAVA_HOME으로 지정된 경로 출력  
     $ sdk uninstall java 버전  <--- 지정된 버전의 자바를 uninstall  
 
-    **[참고]** SDKMAN사용하지 않고 openjdk직접 다운 링크 - https://github.com/ojdkbuild/ojdkbuild  
-    **[참고]** SDKMAN없이 JDK직접 설치할 때는 아래의 동영상을 참고하세요.  
-            [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - Windows 10   
-            [\[YouTube\] 자바 개발도구 JDK 설치 방법](https://youtu.be/Q1AGokud_x4) - MacOS
 <br>
 
 3. Tomcat 9 설치 - https://tomcat.apache.org/download-90.cgi  
@@ -109,6 +93,20 @@
   indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow  
 
 
+6. git 설치  
+    [Windows] https://git-scm.com/download/win      
+  
+    [Mac] 먼저 terminal열고, 아래와 같이 입력하고 엔터치세요.   
+
+           $ git
+           
+     'git'명령어는... 도구를 설치하시겠습니까?라고 묻는 창이 열리면 '설치'를 클릭.(몇분 소요) 설치 완료 후, 아래와 같이 입력후 엔터.
+           
+           $ git --version  
+           git version 2.28.0  
+
+    위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.  
+    <br>
   
   
 
