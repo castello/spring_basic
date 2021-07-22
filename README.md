@@ -88,22 +88,22 @@
               https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0_%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4  
   <br>
     
-   **Tomcat의 실행과 종료**  
-       [Windows]  
-   ```
-    > cd C:\apache-tomcat-9.0.50\bin  
-    > startup.bat  
-    > shutdown.bat  
-   ```
+    **Tomcat의 실행과 종료**  
+         [Windows]  
+       ```
+       > cd C:\apache-tomcat-9.0.50\bin  
+       > startup.bat  
+       > shutdown.bat  
+       ```
  <br>
-       [Mac]  
+        [Mac]  
 
 
-   ```  
-    $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
-    $ ./startup.sh <--- tomcat 실행
-    $ ./shutdown.sh <--- tomcat 종료
-   ```
+     ```  
+      $ cd ~/apache-tomcat-9.0.50/bin   <--- tomcat이 설치된 경로의 bin디렉토리로 이동
+      $ ./startup.sh <--- tomcat 실행
+      $ ./shutdown.sh <--- tomcat 종료
+     ```
   <br>
   <br>
   
