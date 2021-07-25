@@ -119,6 +119,59 @@
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
 <br>
 
+위의 파일을 다운받아서 압축을 풀고, STS설치 폴더 내의 STS.ini의 중간에 아래의 2줄을 추가
+
+[Windows]
+```
+  -vm  
+  jdk설치경로\bin\javaw.exe  
+``` 
+
+[Mac]
+```
+  -vm  
+  jdk설치경로\bin  
+```  
+  <BR>
+    
+**[STS.ini] - Windows**    
+-startup  
+plugins/org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar  
+--launcher.library  
+plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.200.v20210429-1609  
+-product  
+org.springsource.sts.ide  
+--launcher.defaultAction  
+openFile  
+**-vm**  
+**c:\jdk11\bin\javaw.exe**  
+-vmargs  
+-Dosgi.requiredJavaVersion=11  
+-Dosgi.dataAreaRequiresExplicitInit=true  
+-Xms256m  
+-Xmx2048m  
+--add-modules=ALL-SYSTEM  
+-Dosgi.module.lock.timeout=10  
   
+**[STS.ini] - Mac **    
+-startup  
+plugins/org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar  
+--launcher.library  
+plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.200.v20210429-1609  
+-product  
+org.springsource.sts.ide  
+--launcher.defaultAction  
+openFile  
+**-vm**  
+**/Users/seong.namkung/.sdkman/candidates/current/bin**  
+-vmargs  
+-Dosgi.requiredJavaVersion=11  
+-Dosgi.dataAreaRequiresExplicitInit=true  
+-Xms256m  
+-Xmx2048m  
+--add-modules=ALL-SYSTEM  
+-Dosgi.module.lock.timeout=10  
+      
+      
   
 
