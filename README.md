@@ -153,7 +153,10 @@ openFile
 --add-modules=ALL-SYSTEM  
 -Dosgi.module.lock.timeout=10  
   
-**[STS.ini] - Mac **    
+<br>
+<br>  
+  
+**[STS.ini] - Mac**    
 -startup  
 plugins/org.eclipse.equinox.launcher_1.6.200.v20210416-2027.jar  
 --launcher.library  
