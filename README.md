@@ -61,11 +61,11 @@
    ```
     $ sdk version  <--- sdkman 버전출력  
     $ sdk list java  <-- 설치 가능 & 설치된 JDK목록  
-    $ sdk install Identifier <--- 지정된 JDK설치(Identifier대신 8.292.10.1-amzn와 같이 원하는 종류와 버전 지정)  
+    $ sdk install java 11.0.12.7.2-amzn <--- 지정된 JDK설치(원하는 종류와 버전 지정)  
+    $ sdk default java 11.0.12.7.2-amzn <--- 사용할 java버전을 변경(모든 쉘에 적용)
+    $ sdk use java 11.0.12.7.2-amzn <--- 사용할 java버전을 변경(현재 쉘에만 적용)  
     $ sdk current java <--- 현재 사용중인 java버전 출력  
-    $ sdk use java 버전 <--- 현재 사용중인 java버전을 지정된 버젼으로 변경  
-    $ echo $JAVA_HOME  <--- JAVA_HOME으로 지정된 경로 출력  
-    $ sdk uninstall java 버전  <--- 지정된 버전의 자바를 uninstall  
+    $ echo $JAVA_HOME  <--- JAVA_HOME으로 지정된 경로 출력
    ```
    **[참고]** openJDK버전별 다운로드 - https://jdk.java.net/archive/
 <br>
@@ -166,7 +166,7 @@ org.springsource.sts.ide
 --launcher.defaultAction  
 openFile  
 **-vm**  
-**/Users/seong.namkung/.sdkman/candidates/java/current/bin**  
+**/Users/seong.namkung/.sdkman/candidates/java/11.0.12.7.2-amzn/bin**  
 -vmargs  
 -Dosgi.requiredJavaVersion=11  
 -Dosgi.dataAreaRequiresExplicitInit=true  
