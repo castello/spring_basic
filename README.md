@@ -94,8 +94,8 @@
 
    ```
         > cd C:\apache-tomcat-9.0.50\bin
-        > startup.bat
-        > shutdown.bat
+        > startup.bat  <--- tomcat실행  
+        > shutdown.bat <--- tomcat종료  
    ```  
  <br>
  
