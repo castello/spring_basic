@@ -27,8 +27,7 @@
   Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode  
   indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow  
   태그이름 자동변경 - https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag   
-  CSS peek - https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek  
-  CSS class이름 자동완성 - https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion&ssr=false#review-details   
+
 <br>
 
 2. git 설치  
