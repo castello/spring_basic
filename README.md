@@ -21,7 +21,7 @@
 ## 2. 개발 도구 설치 & 설정  
 
 1. VS Code 설치 - https://code.visualstudio.com/download  
-  - 유용한 플러그인 - https://marketplace.visualstudio.com/VSCode
+  - 유용한 플러그인 - https://marketplace.visualstudio.com/VSCode  
   한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko  
   open in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser  
   Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode  
