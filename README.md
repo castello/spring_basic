@@ -26,7 +26,7 @@
   open in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser  
   Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode  
   indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow  
-  css peek - https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek  
+  CSS peek - https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek  
   CSS class이름 자동완성 - https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion&ssr=false#review-details   
 <br>
 
