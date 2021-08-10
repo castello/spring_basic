@@ -122,15 +122,8 @@
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
 <br>
 
-위의 파일을 다운받아서 압축을 풀고, STS설치 폴더 내의 STS.ini의 중간에 아래의 2줄을 추가
 
-[Windows]
-```
-  -vm  
-  jdk설치경로\bin\javaw.exe  
-``` 
-
-[Mac]
+[Mac] - 위의 파일을 다운받아서 압축을 풀고, STS설치 폴더 내의 STS.ini의 중간에 아래의 2줄을 추가
 ```
   -vm  
   jdk설치경로\bin  
