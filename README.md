@@ -162,7 +162,7 @@ org.springsource.sts.ide
 --launcher.defaultAction  
 openFile  
 **-vm**  
-**/Users/seong.namkung/.sdkman/candidates/java/11.0.12.7.2-amzn/bin**  
+**/Users/seongnamkung/.sdkman/candidates/java/current/bin**
 -vmargs  
 -Dosgi.requiredJavaVersion=11  
 -Dosgi.dataAreaRequiresExplicitInit=true  
