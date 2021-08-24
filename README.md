@@ -192,7 +192,7 @@ https://aws.amazon.com/ko/ec2/
 **[참고]** 관련 용어  
 ```
   on-Premise : 서버를 직접 운영하는 방식    
-  Serverless :  서버 작업을 서버내부가 아닌 클라우드 서비스로 처리   
+  Serverless : 서버 작업을 서버내부가 아닌 클라우드 서비스로 처리   
   Region : 데이터 센터가 물리적으로 존재하는 곳.  
   CDN(Content Delivery Network) : 정적 리소스를 빠르게 제공할 수 있게 전세계의 캐시서버에 복제해주는 서비스.  
 ```
