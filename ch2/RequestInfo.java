@@ -24,6 +24,7 @@ public class RequestInfo {
 
         System.out.println("request.getServerName()="+request.getServerName()); // 서버 이름 또는 ip주소
         System.out.println("request.getServerPort()="+request.getServerPort()); // 서버 포트
+        System.out.println("request.getRequestURL()="+request.getRequestURL()); // 요청 URL
         System.out.println("request.getRequestURI()="+request.getRequestURI()); // 요청 URI
 
         System.out.println("request.getContextPath()="+request.getContextPath()); // context path
