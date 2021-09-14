@@ -50,6 +50,7 @@ request.getProtocol()=HTTP/1.1
 request.getScheme()=http
 request.getServerName()=localhost
 request.getServerPort()=8080
+request.getRequestURI()=http://localhost:8080/ch2/requestInfo
 request.getRequestURI()=/ch2/requestInfo
 request.getContextPath()=/ch2
 request.getServletPath()=/requestInfo
