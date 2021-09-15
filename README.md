@@ -120,7 +120,7 @@
 - **IntelliJ**   
 **Windows** - https://www.jetbrains.com/idea/download/#section=windows  
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
-[참고] IntelliJ 학생 라이센스 - https://www.jetbrains.com/community/education/#students  
+[참고] IntelliJ 학생 라이센스 - https://www.jetbrains.com/shop/eform/students  
 <br>
 
 
