@@ -13,9 +13,9 @@ public class PrivateMethodCall {
 		Class helloClass = Class.forName("com.fastcampus.ch2.Hello");
 		Hello hello = (Hello)helloClass.newInstance(); // Class객체가 가진 정보로 객체 생성 
 		Method main = helloClass.getDeclaredMethod("main");
-		main.setAccessible(true); // priavte인 main()을 호출가능하게 한다.
+		main.setAccessible(true); // private인 main()을 호출가능하게 한다.
 		
-		main.invoke(hello); // hello.main()
+		main.invoke(hello); // hello.main() - main()이 private인데도 호출성공
 		
 	}
 }
