@@ -15,7 +15,7 @@ public class WebServer {
             byte[] byteArr = new byte[8192];
 
             in.read(byteArr);
-            String request = new String(byteArr, "utf-8"); // byte -> String
+            String request = new String(byteArr);
                 
             String[] lines = request.split("\n");
             System.out.println("request="+request);
