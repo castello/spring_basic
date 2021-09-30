@@ -5,6 +5,7 @@
 > email : seong.namkung@gmail.com    
 > 수강생 전용 Q&A : https://cafe.naver.com/ArticleList.nhn?search.clubid=10286641&search.menuid=220&search.boardtype=L  
 > 수강생 전용 단톡방 : https://open.kakao.com/o/gatZ4lCd  
+> 에러 메시지 모음 : https://docs.google.com/spreadsheets/d/1BkldpYLe9-rivzBnTXpeq31bU9QMoL1rzkoDBrht9ss/edit?usp=sharing  
 <br>
 
 # Part1. Spring 시작하기
