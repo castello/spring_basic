@@ -8,7 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class RequestHeaderInfo {
 	@RequestMapping("/requestHeaderInfo")
-	public void main(HttpServletRequest request) {
+	public void main2(HttpServletRequest request) {
+		String requestLine = request.getMethod();     // GET
+		requestLine += " " + request.getRequestURI(); // /ch2/requestHeaderInfo
+		requestLine += " " + request.getProtocol();   // HTTP/1.1
+		System.out.println(requestLine);		
+
 		Enumeration<String> e = request.getHeaderNames();
 
 		while (e.hasMoreElements()) {
@@ -19,9 +24,9 @@ public class RequestHeaderInfo {
 }
 
 [실행결과]
+GET /app/requestHeaderInfo HTTP/1.1  <--- 요청줄(request line)
 host:localhost:8080
 connection:keep-alive
-cache-control:max-age=0
 sec-ch-ua:"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"
 sec-ch-ua-mobile:?0
 sec-ch-ua-platform:"macOS"
@@ -34,4 +39,3 @@ sec-fetch-user:?1
 sec-fetch-dest:document
 accept-encoding:gzip, deflate, br
 accept-language:ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
-cookie:Idea-3de0fd5c=dad034bc-87c4-40bb-b985-434ddba1a83d
