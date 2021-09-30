@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class RequestHeaderInfo {
 	@RequestMapping("/requestHeaderInfo")
-	public void main2(HttpServletRequest request) {
+	public void main(HttpServletRequest request) {
 		String requestLine = request.getMethod();     // GET
 		requestLine += " " + request.getRequestURI(); // /ch2/requestHeaderInfo
 		requestLine += " " + request.getProtocol();   // HTTP/1.1
