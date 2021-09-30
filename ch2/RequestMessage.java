@@ -13,9 +13,12 @@ public class RequestMessage {
 	public void main(HttpServletRequest request) throws Exception {
 		
 		// 1. request line
-		String requestLine = request.getMethod();     // GET 또는 POST
-		requestLine += " " + request.getRequestURI(); // /ch2/requestMessage
-		requestLine += " " + request.getProtocol();   // HTTP/1.1
+		String requestLine = request.getMethod();       // GET 또는 POST
+		requestLine += " " + request.getRequestURI();   // /ch2/requestHeaderInfo
+		
+		String queryString = request.getQueryString();  // year=2021&month=10&day=1
+		requestLine += queryString == null ? "" : "?"+queryString;  
+		requestLine += " " + request.getProtocol();     // HTTP/1.1
 		System.out.println(requestLine);		
 
 		
