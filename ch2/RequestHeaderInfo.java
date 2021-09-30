@@ -24,7 +24,7 @@ public class RequestHeaderInfo {
 }
 
 [실행결과]
-GET /ch2/requestHeaderInfo HTTP/1.1  <--- 요청줄(request line)
+GET /ch2/requestHeaderInfo HTTP/1.1  <--- 요청 라인(request line)
 host:localhost:8080
 connection:keep-alive
 sec-ch-ua:"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"
