@@ -48,7 +48,7 @@ public class RequestMessage {
 
 
 [실행결과1] - GET 요청
-GET /ch2/requestMessage HTTP/1.1  <--- 요청 라인(request line)
+GET /ch2/requestMessage?year=2021&month=10&day=1 HTTP/1.1  <--- 요청 라인(request line)
 host:localhost:8080
 connection:keep-alive
 sec-ch-ua:"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"
