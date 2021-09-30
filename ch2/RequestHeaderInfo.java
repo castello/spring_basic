@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class RequestHeaderInfo {
 	@RequestMapping("/requestHeaderInfo")
-	public void main2(HttpServletRequest request) {
+	public void main(HttpServletRequest request) {
 		Enumeration<String> e = request.getHeaderNames();
 
 		while (e.hasMoreElements()) {
