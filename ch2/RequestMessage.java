@@ -14,7 +14,7 @@ public class RequestMessage {
 		
 		// 1. request line
 		String requestLine = request.getMethod();       // GET 또는 POST
-		requestLine += " " + request.getRequestURI();   // /ch2/requestHeaderInfo
+		requestLine += " " + request.getRequestURI();   // /ch2/requestMessage
 		
 		String queryString = request.getQueryString();  // year=2021&month=10&day=1
 		requestLine += queryString == null ? "" : "?"+queryString;  
