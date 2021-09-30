@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class RequestMessage {
 	@RequestMapping("/requestMessage")
-	public void main(HttpServletRequest request) {
+	public void main(HttpServletRequest request) throws Exception {
 		
 		// 1. request line
 		String requestLine = request.getMethod();     // GET 또는 POST
@@ -34,17 +34,13 @@ public class RequestMessage {
 		if(CONTENT_LENGTH > 0) {
 			byte[] content = new byte[CONTENT_LENGTH];
 
-			try {
-				InputStream in = request.getInputStream();
-				in.read(content, 0, CONTENT_LENGTH);
-			} catch(IOException ex) {
-				ex.printStackTrace();
-			}
+			InputStream in = request.getInputStream();
+			in.read(content, 0, CONTENT_LENGTH);
 			
 			System.out.println(); // empty line
 			System.out.println(new String(content, "utf-8")); // year=2021&month=10&day=1
-		}  
-	}
+		}  // if
+	} // main
 }
 
 
@@ -83,5 +79,5 @@ sec-fetch-mode:cors
 sec-fetch-dest:empty
 accept-encoding:gzip, deflate, br
 accept-language:ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
-
+                          <--- empty line
 year=2021&month=10&day=1  <--- request body
