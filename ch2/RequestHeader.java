@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class RequestHeaderInfo {
-	@RequestMapping("/requestHeaderInfo")
+public class RequestHeader {
+	@RequestMapping("/requestHeader")
 	public void main(HttpServletRequest request) {
 		
 		Enumeration<String> e = request.getHeaderNames();
