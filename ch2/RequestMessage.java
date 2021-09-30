@@ -8,13 +8,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class RequestHeaderInfo {
-	@RequestMapping("/requestHeaderInfo")
+public class RequestMessage {
+	@RequestMapping("/requestMessage")
 	public void main(HttpServletRequest request) {
 		
 		// 1. request line
 		String requestLine = request.getMethod();     // GET 또는 POST
-		requestLine += " " + request.getRequestURI(); // /ch2/requestHeaderInfo
+		requestLine += " " + request.getRequestURI(); // /ch2/requestMessage
 		requestLine += " " + request.getProtocol();   // HTTP/1.1
 		System.out.println(requestLine);		
 
@@ -49,7 +49,7 @@ public class RequestHeaderInfo {
 
 
 [실행결과1] - GET 요청
-GET /ch2/requestHeaderInfo HTTP/1.1  <--- 요청 라인(request line)
+GET /ch2/requestMessage HTTP/1.1  <--- 요청 라인(request line)
 host:localhost:8080
 connection:keep-alive
 sec-ch-ua:"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"
@@ -66,7 +66,7 @@ accept-encoding:gzip, deflate, br
 accept-language:ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
 
 [실행결과2] - POST 요청
-POST /ch2/requestHeaderInfo HTTP/1.1
+POST /ch2/requestMessage HTTP/1.1  <--- 요청 라인(request line)
 host:localhost:8080
 connection:keep-alive
 content-length:90
