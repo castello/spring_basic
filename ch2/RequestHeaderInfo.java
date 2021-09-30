@@ -42,7 +42,7 @@ public class RequestHeaderInfo {
 			}
 			
 			System.out.println(); // empty line
-			System.out.println(new String(content)); // year=2021&month=10&day=1
+			System.out.println(new String(content, "utf-8")); // year=2021&month=10&day=1
 		}  
 	}
 }
