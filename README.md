@@ -1,5 +1,5 @@
 > # 남궁성의 Spring framework 강좌 - 기본편
-> Spring 입문자를 위한 최고의 강좌.  https://fastcampus.co.kr/dev_academy_nks        
+> Spring 입문자를 위한 최고의 강좌 - https://fastcampus.co.kr/dev_academy_nks        
 > Spring framework 강좌 - 심화편(준비중)  
 > Spring boot 강좌 - 기본편(준비중), 심화편(준비중)  
 > email : seong.namkung@gmail.com    
