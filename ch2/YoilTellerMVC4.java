@@ -26,9 +26,10 @@ System.out.println("date="+date);
     	char yoil = getYoil(date);
 
     	// 4. ModelAndView에 작업한 결과를 저장 
-      	mv.addObject("year",  date.getYear());     	
-      	mv.addObject("month", date.getMonth());     	
-      	mv.addObject("day",   date.getDay());     	
+      	//mv.addObject("year",  date.getYear());     	
+      	//mv.addObject("month", date.getMonth());     	
+      	//mv.addObject("day",   date.getDay());
+        mv.addObject("myDate", date);
       	mv.addObject("yoil", yoil);        
         
       	// 5. 작업 결과를 보여줄 뷰의 이름을 지정 
