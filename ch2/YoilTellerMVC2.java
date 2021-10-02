@@ -19,7 +19,7 @@ public class YoilTellerMVC2 {
     ) throws IOException {
 
     	if(!isValid(year, month, day)) 
-    		return "yoilError";
+    		return "yoilError";  // /WEB-INF/views/yoilError.jsp
     	
         // 2. 작업
         Calendar cal = Calendar.getInstance();
@@ -33,7 +33,7 @@ public class YoilTellerMVC2 {
         model.addAttribute("day", day);
         model.addAttribute("yoil", yoil);
         
-        return "yoil";
+        return "yoil";  // /WEB-INF/views/yoil.jsp
     } // main
     
     public boolean isValid(int year, int month, int day) {    
