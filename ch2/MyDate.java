@@ -1,9 +1,9 @@
 package com.fastcampus.ch2;
 
 public class MyDate {
-	int year;
-	int month;
-	int day;
+	private int year;
+	private int month;
+	private int day;
 	
 	public int getYear() {
 		return year;
