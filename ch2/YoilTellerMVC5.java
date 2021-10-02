@@ -26,7 +26,7 @@ System.out.println("myDate="+date);
 //      	m.addAttribute("myDate", date);     	
       	m.addAttribute("yoil", yoil);        
         
-      	// 4. 작업 결과를 보여줄 뷰의 이름을 반 
+      	// 4. 작업 결과를 보여줄 뷰의 이름을 반환 
       	return "yoil";
     }
     
