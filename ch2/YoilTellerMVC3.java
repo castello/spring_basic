@@ -15,7 +15,7 @@ public class YoilTellerMVC3 {
     		@RequestParam(defaultValue="-1") int year, 
     		@RequestParam(defaultValue="-1") int month, 
     		@RequestParam(defaultValue="-1") int day
-    ) throws IOException {
+    ) {
 
     	   // 1. ModelAndView를 생성
          ModelAndView mv = new ModelAndView(); 
