@@ -16,7 +16,7 @@ public class YoilTellerMVC2 {
     		@RequestParam(defaultValue="-1") int month, 
     		@RequestParam(defaultValue="-1") int day, 
     		Model model
-    ) throws IOException {
+    ) {
 
         // 1. 유효성 검사
     	if(!isValid(year, month, day)) 
