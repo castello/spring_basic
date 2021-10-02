@@ -16,19 +16,19 @@ public class YoilTellerMVC3 {
     		@RequestParam(defaultValue="-1") int day
     ) {
 
-    	   // 1. ModelAndView를 생성
+    	 // 1. ModelAndView를 생성
          ModelAndView mv = new ModelAndView(); 
     	
-    	  // 2. 유효성 검사 
-    	  if(!isValid(year, month, day)) {
-     	     mv.setViewName("yoilError"); // View의 이름을 지정
+    	// 2. 유효성 검사 
+    	if(!isValid(year, month, day)) {
+     	   mv.setViewName("yoilError"); // View의 이름을 지정
            return mv;
         }
     	
         // 3. 작업
       	char yoil = getYoil(year, month, day);
 
-    	  // 4. ModelAndView에 작업한 결과를 저장 
+    	// 4. ModelAndView에 작업한 결과를 저장 
       	mv.addObject("year",  year);     	
       	mv.addObject("month", month);     	
       	mv.addObject("day",   day);     	
