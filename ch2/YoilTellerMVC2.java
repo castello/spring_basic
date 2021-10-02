@@ -18,25 +18,32 @@ public class YoilTellerMVC2 {
     		Model model
     ) throws IOException {
 
+        // 1. 유효성 검사
     	if(!isValid(year, month, day)) 
-    		return "yoilError";  // /WEB-INF/views/yoilError.jsp
+    		return "yoilError";  // 유효하지 않으면, /WEB-INF/views/yoilError.jsp로 이동
     	
         // 2. 작업
-        Calendar cal = Calendar.getInstance();
-        cal.set(year, month - 1, day);
+    	char yoil = getYoil(year, month, day);
 
-        int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-        char yoil = " 일월화수목금토".charAt(dayOfWeek);
-
+        // 3. Model에 작업 결과 저장
         model.addAttribute("year", year);
         model.addAttribute("month", month);
         model.addAttribute("day", day);
         model.addAttribute("yoil", yoil);
         
+        // 4. 작업 결과를 보여줄 View의 이름을 반환
         return "yoil";  // /WEB-INF/views/yoil.jsp
     } // main
     
-    public boolean isValid(int year, int month, int day) {    
+    private char getYoil(int year, int month, int day) {
+        Calendar cal = Calendar.getInstance();
+        cal.set(year, month - 1, day);
+
+        int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+        return " 일월화수목금토".charAt(dayOfWeek);
+    }
+    
+    private boolean isValid(int year, int month, int day) {    
     	if(year==-1 || month==-1 || day==-1) 
     		return false;
     	
