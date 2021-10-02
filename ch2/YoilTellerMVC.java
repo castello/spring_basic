@@ -31,7 +31,7 @@ public class YoilTellerMVC2 {
         model.addAttribute("day", day);
         model.addAttribute("yoil", yoil);
         
-        // 4. View이름을 반환
+        // 4. 작업 결과를 보여줄 View의 이름을 반환
         return "yoil"; // /WEB-INF/views/yoil.jsp
     }
     
