@@ -1,6 +1,5 @@
 package com.fastcampus.ch2;
 
-import java.io.IOException;
 import java.util.Calendar;
 
 import org.springframework.stereotype.Controller;
