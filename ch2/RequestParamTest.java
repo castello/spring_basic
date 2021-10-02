@@ -22,7 +22,6 @@ public class RequestParamTest {
 	@RequestMapping("/requestParam2")
 //	public void main2(@RequestParam(name="year", required=false) String year) {   // 아래와 동일 
 	public void main2(String year) {   
-//	public void main2(String year) 
 //		http://localhost/ch2/requestParam2         ---->> year=null
 //		http://localhost/ch2/requestParam2?year    ---->> year=""
 		System.out.printf("[%s]year=[%s]%n", new Date(), year);
@@ -30,7 +29,7 @@ public class RequestParamTest {
 
 	@RequestMapping("/requestParam3")
 //		public void main3(@RequestParam(name="year", required=true) String year) {   // 아래와 동일 
-		public void main3(@RequestParam String year) {   // 아래와 동일 
+		public void main3(@RequestParam String year) {   
 //		http://localhost/ch2/requestParam3         ---->> year=null   400 Bad Request. required=true라서 
 //		http://localhost/ch2/requestParam3?year    ---->> year=""
 		System.out.printf("[%s]year=[%s]%n", new Date(), year);
