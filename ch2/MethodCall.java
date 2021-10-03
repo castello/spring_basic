@@ -21,6 +21,7 @@ public class MethodCall {
 		Model model = new BindingAwareModelMap();
 		System.out.println("[before] model="+model);
 		
+		// YoilTeller.main(String year, String month, String day, Model model)을 호출
 		String viewName = (String)main.invoke(obj, new Object[] { "2021", "10", "1", model }); 	
 		System.out.println("viewName="+viewName);	
 		
