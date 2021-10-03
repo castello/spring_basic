@@ -28,7 +28,7 @@ public class MethodCall {
 		// Model의 내용을 출력 
 		System.out.println("[after] model="+model);
 				
-		// 텍스트 파일을 이용한 rendering
+		// 뷰를 이용한 rendering
 		render(model, viewName);			
 	} // main
 	
