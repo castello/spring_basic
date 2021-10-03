@@ -70,7 +70,7 @@ viewName=yoil
 	<title>YoilTellerMVC</title>
 </head>
 <body>
-<h1>2021년 10월 1일은 요일입니다.</h1>
+<h1>2021년 10월 1일은 금요일입니다.</h1>
 </body>
 </html>
 
