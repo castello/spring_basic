@@ -8,14 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class YoilTellerMVC2 {
-    @RequestMapping("/getYoil2") // http://localhost/ch2/getYoil2
-    public String main(
-    		@RequestParam(defaultValue="-1") int year, 
-    		@RequestParam(defaultValue="-1") int month, 
-    		@RequestParam(defaultValue="-1") int day, 
-    		Model model
-    ) {
+public class YoilTellerMVC {
+    @RequestMapping("/getYoilMVC") // http://localhost/ch2/getYoilMVC
+    public String main(int year, int month, int day, Model model) {
 
         // 1. 유효성 검사
     	if(!isValid(year, month, day)) 
