@@ -57,7 +57,7 @@ public class MethodCall2 {
 		render(model, viewName);			
 	} // main
 	
-	static Object convertTo(Object value, Class type) {
+	private static Object convertTo(Object value, Class type) {
 		if(type==null || value==null || type.isInstance(value)) // 타입이 같으면 그대로 반환 
 			return value;
 
@@ -71,7 +71,7 @@ public class MethodCall2 {
 		return value;
 	}
 	
-	static void render(Model model, String viewName) throws IOException {
+	private static void render(Model model, String viewName) throws IOException {
 		String result = "";
 		
 		// 1. 뷰의 내용을 한줄씩 읽어서 하나의 문자열로 만든다.
