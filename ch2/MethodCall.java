@@ -28,7 +28,7 @@ public class MethodCall {
 		// Model의 내용을 출력 
 		System.out.println("[after] model="+model);
 				
-		// view를 이용한 rendering
+		// model, view를 이용해서 응답 결과를 생성
 		render(model, viewName);			
 	} // main
 	
