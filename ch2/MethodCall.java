@@ -32,7 +32,7 @@ public class MethodCall {
 		render(model, viewName);			
 	} // main
 	
-	static void render(Model model, String viewName) throws IOException {
+	private static void render(Model model, String viewName) throws IOException {
 		String result = "";
 		
 		// 1. 뷰의 내용을 한줄씩 읽어서 하나의 문자열로 만든다.
