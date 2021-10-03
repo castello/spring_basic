@@ -50,7 +50,7 @@ public class MethodCall {
 		while(it.hasNext()) {
 			String key = (String)it.next();
 
-			// 4. replace()로 key를 value 치환한다.
+			// 4. replace()를 이용해서 key를 value로 치환한다.
 			result = result.replace("${"+key+"}", (String)map.get(key));
 		}
 		
