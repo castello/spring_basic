@@ -90,7 +90,7 @@ public class MethodCall2 {
 			String key = (String)it.next();
 
 			// 4. replace()로 key를 value 치환한다.
-			result = result.replace("${"+key+"}", map.get(key)+"");
+			result = result.replace("${"+key+"}", (String)map.get(key));
 		}
 		
 		// 5.렌더링 결과를 출력한다.
