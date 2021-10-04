@@ -60,8 +60,12 @@ public class MyDispatcherServlet extends HttpServlet {
 		}
 				
 		// 4. 텍스트 파일을 이용한 rendering
-		render(model, viewName, response);			
+		render(model, getResolvedViewName(viewName), response);			
 	} // main
+	
+	private String getResolvedViewName(String viewName) {
+		return getServletContext().getRealPath("/WEB-INF/views") +"/"+viewName+".jsp";
+	}
 	
 	private Object convertTo(Object value, Class type) {
 		if(type==null || value==null || type.isInstance(value)) // 타입이 같으면 그대로 반환 
@@ -77,7 +81,7 @@ public class MyDispatcherServlet extends HttpServlet {
 		return value;
 	}
 	
-	private void render(Model model, String viewName, HttpServletResponse response) throws IOException {
+	private void render(Model model, String resolvedViewName, HttpServletResponse response) throws IOException {
 		String result = "";
 		
 		response.setContentType("text/html");
@@ -85,10 +89,7 @@ public class MyDispatcherServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		// 1. 뷰의 내용을 한줄씩 읽어서 하나의 문자열로 만든다.
-		final String VIEW_PATH = "/Users/castello/eclipse-workspace_sts/firstSpringApp/src/main/webapp/WEB-INF/views/"
-		                         + viewName+".jsp";
-		
-		Scanner sc = new Scanner(new File(VIEW_PATH));
+		Scanner sc = new Scanner(new File(resolvedViewName));
 		
 		while(sc.hasNextLine())
 			result += sc.nextLine()+ System.lineSeparator();
