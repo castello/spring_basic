@@ -63,10 +63,6 @@ public class MyDispatcherServlet extends HttpServlet {
 		render(model, viewName, response);			
 	} // main
 	
-	private String getResolvedViewName(String viewName) {
-		return getServletContext().getRealPath("/WEB-INF/views") +"/"+viewName+".jsp";
-	}
-	
 	private Object convertTo(Object value, Class type) {
 		if(type==null || value==null || type.isInstance(value)) // 타입이 같으면 그대로 반환 
 			return value;
@@ -79,6 +75,10 @@ public class MyDispatcherServlet extends HttpServlet {
 		}
 			
 		return value;
+	}
+		
+	private String getResolvedViewName(String viewName) {
+		return getServletContext().getRealPath("/WEB-INF/views") +"/"+viewName+".jsp";
 	}
 	
 	private void render(Model model, String viewName, HttpServletResponse response) throws IOException {
