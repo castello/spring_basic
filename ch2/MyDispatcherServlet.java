@@ -66,9 +66,6 @@ public class MyDispatcherServlet extends HttpServlet {
 	} // main
 	
 	private Object convertTo(Object value, Class type) {
-		System.out.println("value="+value);
-		System.out.println("type="+type);
-		
 		if(type==null || value==null || type.isInstance(value)) // 타입이 같으면 그대로 반환 
 			return value;
 		
