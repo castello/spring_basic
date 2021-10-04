@@ -40,9 +40,9 @@ public class MyDispatcherServlet extends HttpServlet {
 			Parameter[] paramArr = main.getParameters();
 			Object[] argArr = new Object[main.getParameterCount()];
 
-			for(Parameter param : paramArr) {
-				String paramName = param.getName();
-				Class  paramType = param.getType();
+			for(int i=0;i<paramArr.length;i++) {
+				String paramName = paramArr[i].getName();
+				Class  paramType = paramArr[i].getType();
 				Object value = map.get(paramName);
 
 				// paramType중에 Model이 있으면, 생성 & 저장 
