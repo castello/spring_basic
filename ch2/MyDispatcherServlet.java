@@ -60,7 +60,7 @@ public class MyDispatcherServlet extends HttpServlet {
 		}
 				
 		// 4. 텍스트 파일을 이용한 rendering
-		render(model, getResolvedViewName(viewName), response);			
+		render(model, viewName, response);			
 	} // main
 	
 	private String getResolvedViewName(String viewName) {
@@ -81,7 +81,7 @@ public class MyDispatcherServlet extends HttpServlet {
 		return value;
 	}
 	
-	private void render(Model model, String resolvedViewName, HttpServletResponse response) throws IOException {
+	private void render(Model model, String viewName, HttpServletResponse response) throws IOException {
 		String result = "";
 		
 		response.setContentType("text/html");
@@ -89,7 +89,7 @@ public class MyDispatcherServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		// 1. 뷰의 내용을 한줄씩 읽어서 하나의 문자열로 만든다.
-		Scanner sc = new Scanner(new File(resolvedViewName));
+		Scanner sc = new Scanner(new File(getResolvedViewName(viewName)));
 		
 		while(sc.hasNextLine())
 			result += sc.nextLine()+ System.lineSeparator();
