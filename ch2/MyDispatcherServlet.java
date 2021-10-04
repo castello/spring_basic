@@ -33,10 +33,10 @@ public class MyDispatcherServlet extends HttpServlet {
 			Class clazz = Class.forName("com.fastcampus.ch2.YoilTellerMVC");
 			YoilTellerMVC obj = (YoilTellerMVC)clazz.newInstance();
 			
-      // 1. main메서드의 정보를 얻는다.
+      			// 1. main메서드의 정보를 얻는다.
 			Method main = clazz.getDeclaredMethod("main", int.class, int.class, int.class, Model.class);
 			
-      // 2. main메서드의 매개변수 목록(paramArr)을 읽어서 메서드 호출에 사용할 인자 목록(argArr)을 만든다.
+      			// 2. main메서드의 매개변수 목록(paramArr)을 읽어서 메서드 호출에 사용할 인자 목록(argArr)을 만든다.
 			Parameter[] paramArr = main.getParameters();
 			Object[] argArr = new Object[main.getParameterCount()];
 
