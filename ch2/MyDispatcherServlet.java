@@ -21,8 +21,6 @@ import org.springframework.validation.support.BindingAwareModelMap;
 
 @WebServlet("/myDispatcherServlet")  // http://localhost/ch2/myDispatcherServlet?year=2021&month=10&day=1
 public class MyDispatcherServlet extends HttpServlet {
-	static String PATH = ""; 
-	
 	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		Map    map = request.getParameterMap();
