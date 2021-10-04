@@ -40,7 +40,7 @@ public class MyDispatcherServlet extends HttpServlet {
 			Parameter[] paramArr = main.getParameters();
 			Object[] argArr = new Object[main.getParameterCount()];
 
-			for(Parameter param: paramArr) {
+			for(Parameter param : paramArr) {
 				String paramName = param.getName();
 				Class  paramType = param.getType();
 				Object value = map.get(paramName);
