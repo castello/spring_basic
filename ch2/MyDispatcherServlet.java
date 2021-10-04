@@ -45,7 +45,11 @@ public class MyDispatcherServlet extends HttpServlet {
 
 				// paramType중에 Model이 있으면, 생성 & 저장 
 				if(paramType==Model.class) {
-					argArr[i] = model = new BindingAwareModelMap(); 
+					argArr[i] = model = new BindingAwareModelMap();
+				} else if(paramType==HttpServletRequest.class) {
+					argArr[i] = request;
+				} else if(paramType==HttpServletResponse.class) {
+					argArr[i] = response;					
 				} else if(value != null) {  // map에 paramName이 있으면,
 					// value와 parameter의 타입을 비교해서, 다르면 변환해서 저장 
 					String strValue = ((String[])value)[0];	// getParameterMap()에서 꺼낸 value는 String배열이므로 변환 필요 
