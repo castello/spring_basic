@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.ui.Model;
 import org.springframework.validation.support.BindingAwareModelMap;
 
-@WebServlet("/myDispatcherServlet")  // http://localhost:8080/ch2/myDispatcherServlet?year=2021&month=10&day=1
+@WebServlet("/myDispatcherServlet")  // http://localhost/ch2/myDispatcherServlet?year=2021&month=10&day=1
 public class MyDispatcherServlet extends HttpServlet {
 	static String PATH = ""; 
 	
