@@ -21,7 +21,7 @@ public class YoilTellerMVC2 {
     	if(!isValid(year, month, day)) 
     		return "yoilError";  // 유효하지 않으면, /WEB-INF/views/yoilError.jsp로 이동
     	
-        // 2. 작업
+        // 2. 처리
     	char yoil = getYoil(year, month, day);
 
         // 3. Model에 작업 결과 저장
