@@ -18,7 +18,7 @@ System.out.println("myDate="+date);
     	if(!isValid(date))
     		return "yoilError";
     	
-        // 2. 작업
+        // 2. 처리
     	char yoil = getYoil(date);
 
     	// 3. Model에 작업한 결과를 저장 
