@@ -22,7 +22,7 @@ System.out.println("date="+date);
     		return mv;
         }
     	
-        // 3. 작업
+        // 3. 처리
     	char yoil = getYoil(date);
 
     	// 4. ModelAndView에 작업한 결과를 저장 
