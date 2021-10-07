@@ -25,7 +25,7 @@ public class YoilTellerMVC3 {
            return mv;
         }
     	
-        // 3. 작업
+        // 3. 처리
       	char yoil = getYoil(year, month, day);
 
     	// 4. ModelAndView에 작업한 결과를 저장 
