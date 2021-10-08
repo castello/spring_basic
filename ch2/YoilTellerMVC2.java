@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class YoilTellerMVC2 {
+public class YoilTellerMVC2 { 
     @RequestMapping("/getYoilMVC2") // http://localhost/ch2/getYoilMVC2
     public String main(
     		@RequestParam(defaultValue="-1") int year, 
