@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class YoilTellerMVC {
     @RequestMapping("/getYoilMVC") // http://localhost/ch2/getYoilMVC
     public String main(int year, int month, int day, Model model) {
-
+ 
         // 1. 유효성 검사
     	if(!isValid(year, month, day)) 
     		return "yoilError";  // 유효하지 않으면, /WEB-INF/views/yoilError.jsp로 이동
