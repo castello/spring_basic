@@ -16,6 +16,7 @@ public class MethodCall {
 		Class clazz = Class.forName("com.fastcampus.ch2.YoilTeller");
 		YoilTeller obj = (YoilTeller)clazz.newInstance();
 		
+		// 메서드 정보 가져오기 -          YoilTeller.main(String year, String month, String day, Model model)
 		Method main = clazz.getDeclaredMethod("main", String.class, String.class, String.class, Model.class);
 		
 		Model model = new BindingAwareModelMap();
