@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class YoilTellerMVC3 {
-    @RequestMapping("/getYoilMVC3") // http://localhost/ch2/getYoilMVC3 
+    @RequestMapping("/getYoilMVC3") // http://localhost/ch2/getYoilMVC3  
     public ModelAndView main(  // 반환 타입이 ModelAndView
     		@RequestParam(defaultValue="-1") int year, 
     		@RequestParam(defaultValue="-1") int month, 
