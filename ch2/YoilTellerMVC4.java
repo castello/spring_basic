@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class YoilTellerMVC4 {
     @RequestMapping("/getYoilMVC4") // http://localhost/ch2/getYoilMVC4?year=2021&month=10&day=1
-    public ModelAndView main(MyDate date) { // 반환 타입이 ModelAndView
+    public ModelAndView main(MyDate date) { // 반환 타입이 ModelAndView 
 System.out.println("date="+date);
 
     	// 1. ModelAndView를 생성
