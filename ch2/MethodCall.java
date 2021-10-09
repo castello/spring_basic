@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Main {
+public class MethodCall {
 	public static void main(String[] args) throws Exception{
 		HashMap map = new HashMap();
 		System.out.println("before:"+map);
