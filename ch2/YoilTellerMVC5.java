@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class YoilTellerMVC5 {
     @RequestMapping("/getYoilMVC5") // http://localhost/ch2/getYoilMVC5?year=2021&month=10&day=1
-//    public String main(@ModelAttribute("myDate") MyDate date, Model m) { // 아래와 동일 
+//  public String main(@ModelAttribute("myDate") MyDate date, Model m) { // 아래와 동일 
     public String main(@ModelAttribute MyDate date, Model m) { // @ModelAttribute사용, 반환 타입은 String
 System.out.println("myDate="+date);
 
@@ -22,8 +22,8 @@ System.out.println("myDate="+date);
     	char yoil = getYoil(date);
 
     	// 3. Model에 작업한 결과를 저장 
-// @ModelAttribute 덕분에 MyDate를 저장안해도 됨. View로 자동 전달됨.
-//      	m.addAttribute("myDate", date);     	
+        // @ModelAttribute 덕분에 MyDate를 저장안해도 됨. View로 자동 전달됨.
+//      m.addAttribute("myDate", date);     	
       	m.addAttribute("yoil", yoil);        
         
       	// 4. 작업 결과를 보여줄 뷰의 이름을 반환 
