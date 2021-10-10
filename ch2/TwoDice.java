@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 @Controller
 public class TwoDice {
-    @RequestMapping("/roll")
+    @RequestMapping("/rollDice")
     //    public static void main(String[] args) {
     public void main(HttpServletResponse response) throws IOException {
         int idx1 = (int)(Math.random()*6)+1;
