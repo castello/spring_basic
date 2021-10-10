@@ -24,13 +24,13 @@ System.out.println("myDate="+date);
     	// 3. Model에 작업한 결과를 저장 
         // @ModelAttribute 덕분에 MyDate를 저장안해도 됨. View로 자동 전달됨.
 //      m.addAttribute("myDate", date);     	
-      	m.addAttribute("yoil", yoil);        
+//      m.addAttribute("yoil", yoil);        
         
       	// 4. 작업 결과를 보여줄 뷰의 이름을 반환 
       	return "yoil";
     }
     
-    private char getYoil(MyDate date) {
+    private @ModelAttribute("yoil") char getYoil(MyDate date) {
     	return getYoil(date.getYear(), date.getMonth(), date.getDay());
     }
     
