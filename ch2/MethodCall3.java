@@ -13,7 +13,7 @@ import java.util.Scanner;
 import org.springframework.ui.Model;
 import org.springframework.validation.support.BindingAwareModelMap;
 
-public class MethodCall2 {
+public class MethodCall3 {
 	public static void main(String[] args) throws Exception{
 		Map map = new HashMap();
 		map.put("year", "2021");
@@ -110,7 +110,7 @@ viewName=yoil
 	<title>YoilTellerMVC</title>
 </head>
 <body>
-<h1>2021년 10월 1일은 요일입니다.</h1>
+<h1>2021년 10월 1일은 금요일입니다.</h1>
 </body>
 </html>
 */
