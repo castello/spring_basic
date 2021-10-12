@@ -21,6 +21,7 @@ public class MethodCall2 {
 		Model model = new BindingAwareModelMap();
 		System.out.println("[before] model="+model);
 		
+		// String viewName = obj.main(2021, 10, 1, model);
 		String viewName = (String)main.invoke(obj, new Object[] { 2021, 10, 1, model }); 	
 		System.out.println("viewName="+viewName);	
 		
