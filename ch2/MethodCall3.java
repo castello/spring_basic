@@ -103,6 +103,7 @@ paramArr=[int year, int month, int day, org.springframework.ui.Model model]
 argArr=[2021, 10, 1, {}]
 viewName=yoil
 [after] model={year=2021, month=10, day=1, yoil=금}
+<%@ page contentType="text/html;charset=utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <html>
