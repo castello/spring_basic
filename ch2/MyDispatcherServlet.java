@@ -93,7 +93,7 @@ public class MyDispatcherServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		// 1. 뷰의 내용을 한줄씩 읽어서 하나의 문자열로 만든다.
-		Scanner sc = new Scanner(new File(getResolvedViewName(viewName)));
+		Scanner sc = new Scanner(new File(getResolvedViewName(viewName)), "utf-8");
 		
 		while(sc.hasNextLine())
 			result += sc.nextLine()+ System.lineSeparator();
