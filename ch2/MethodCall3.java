@@ -24,6 +24,7 @@ public class MethodCall3 {
 		Class clazz = Class.forName("com.fastcampus.ch2.YoilTellerMVC");
 		Object obj  = clazz.newInstance();
 		
+		// YoilTellerMVC.main(int year, int month, int day, Model model)
 		Method main = clazz.getDeclaredMethod("main", int.class, int.class, int.class, Model.class);
 				
 		Parameter[] paramArr = main.getParameters();
