@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.springframework.util.StringUtils;
 
-public class MethodCall4 {
+public class SetterCall {
 	public static void main(String[] args) throws Exception{
 		Map<String, String> map = new HashMap<>();
 		map.put("year", "2021");
