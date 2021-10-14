@@ -72,9 +72,9 @@ public class MyDispatcherServlet extends HttpServlet {
 			return value;
 		
 		// 타입이 다르면, 변환해서 반환
-		if(String.class.isInstance(value) || type==int.class) { // String -> int
+		if(String.class.isInstance(value) && type==int.class) { // String -> int
 			return Integer.valueOf((String)value);
-		} else if(String.class.isInstance(value) || type==double.class) { // String -> double
+		} else if(String.class.isInstance(value) && type==double.class) { // String -> double
 			return Double.valueOf((String)value);
 		}
 			
