@@ -15,6 +15,8 @@
 	
 	int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
 	char yoil = " 일월화수목금토".charAt(dayOfWeek);
+	
+	// 3. 출력 
 %>
 <html>
 <head>
