@@ -15,10 +15,17 @@ public class MethodCall4 {
 		map.put("month", "10");
 		map.put("day", "1");
 		
+		Class<?> type = Class.forName("com.fastcampus.ch2.MyDate");
+
+		// MyDate인스턴스를 생성하고, map의 값으로 초기화한다. 
+		Object obj = getFilledObjWithMap(map, type);
+		System.out.println("obj="+obj);
+	} // main
+
+	private static Object getFilledObjWithMap(Map<String, String> map, Class<?> clazz) throws Exception {
 		// 1. MyDate인스턴스 생성
-		Class<?> clazz = Class.forName("com.fastcampus.ch2.MyDate");
-//		MyDate obj = (MyDate)clazz.newInstance(); // deprecated method
-		MyDate obj = (MyDate)clazz.getDeclaredConstructor().newInstance(new Object[0]);
+//		Object obj = clazz.newInstance(); // deprecated method
+		Object obj = clazz.getDeclaredConstructor().newInstance(new Object[0]);
 
 		// 2. MyDate인스턴스의 setter를 호출해서, map의 값으로 MyDate를 초기화
 		// 	 2-1. MyDate의 모든 iv를 돌면서 map에 있는지 찾는다.
@@ -47,8 +54,9 @@ public class MethodCall4 {
 		}
 		
 		System.out.println(Arrays.toString(ivArr));
-		System.out.println("obj="+obj);
-	} // main
+		
+		return obj;
+	}
 
 	private static Object convertTo(Object value, Class<?> type) {
 		// value의 타입과 type의 타입이 같으면 그대로 반환
@@ -75,5 +83,4 @@ method=public void com.fastcampus.ch2.MyDate.setYear(int)
 method=public void com.fastcampus.ch2.MyDate.setMonth(int)
 method=public void com.fastcampus.ch2.MyDate.setDay(int)
 [private int com.fastcampus.ch2.MyDate.year, private int com.fastcampus.ch2.MyDate.month, private int com.fastcampus.ch2.MyDate.day]
-obj=[year=2021, month=10, day=1]
  */
