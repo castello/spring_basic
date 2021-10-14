@@ -14,7 +14,7 @@ public class MethodCall2 {
 	public static void main(String[] args) throws Exception{
 
 		Class clazz = Class.forName("com.fastcampus.ch2.YoilTellerMVC");
-		YoilTellerMVC obj = (YoilTellerMVC)clazz.newInstance();
+		Object obj = clazz.newInstance();
 		
 		Method main = clazz.getDeclaredMethod("main", int.class, int.class, int.class, Model.class);
 		
