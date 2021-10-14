@@ -33,7 +33,7 @@ public class MethodCall3 {
 		for(int i=0;i<paramArr.length;i++) {
 			String paramName = paramArr[i].getName();
 			Class  paramType = paramArr[i].getType();
-			Object value = map.get(paramName);
+			Object value = map.get(paramName); // map에서 못찾으면 value는 null
 
 			// paramType중에 Model이 있으면, 생성 & 저장 
 			if(paramType==Model.class) {
