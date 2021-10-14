@@ -38,14 +38,13 @@ public class MethodCall4 {
 			
 			// map에 같은 이름의 key가 있으면 가져와서 setter호출 
 			Object value = map.get(name); // 못찾으면 value의 값은 null
-			String setterName = getSetterName(name);
 			Method method = null;
 			
 			try {
 				// map에 iv와 일치하는 키가 있을 때만, setter를 호출
 				if(value==null) continue;
 				
-				method = clazz.getDeclaredMethod(setterName, type); // setter의 정보 얻기	
+				method = clazz.getDeclaredMethod(getSetterName(name), type); // setter의 정보 얻기	
 				System.out.println("method="+method);
 				method.invoke(obj, convertTo(value, type)); // obj의 setter를 호출
 			} catch(Exception e) {
