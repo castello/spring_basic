@@ -40,8 +40,7 @@ public class MethodCall4 {
 			Object value = map.get(name); // 못찾으면 value의 값은 null
 			Method method = null;
 			
-			try {
-				// map에 iv와 일치하는 키가 있을 때만, setter를 호출
+			try {   // map에 iv와 일치하는 키가 있을 때만, setter를 호출
 				if(value==null) continue;
 				
 				method = clazz.getDeclaredMethod(getSetterName(name), type); // setter의 정보 얻기	
