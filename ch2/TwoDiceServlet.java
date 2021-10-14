@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 	
 @WebServlet("/rollDice2")
 public class TwoDiceServlet extends HttpServlet {
-    public void service(HttpServletRequest request, HttpServletResponse response) 
-    		throws IOException {
+    @Override
+    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int idx1 = (int)(Math.random()*6)+1;
         int idx2 = (int)(Math.random()*6)+1;
 
