@@ -81,4 +81,5 @@ method=public void com.fastcampus.ch2.MyDate.setYear(int)
 method=public void com.fastcampus.ch2.MyDate.setMonth(int)
 method=public void com.fastcampus.ch2.MyDate.setDay(int)
 [private int com.fastcampus.ch2.MyDate.year, private int com.fastcampus.ch2.MyDate.month, private int com.fastcampus.ch2.MyDate.day]
+obj=[year=2021, month=10, day=1]
  */
