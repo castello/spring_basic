@@ -19,7 +19,7 @@ public class SetterCall {
 
 		// MyDate인스턴스를 생성하고, map의 값으로 초기화한다. 
 		Object obj = getFilledObjWithMap(map, type);
-		System.out.println("obj="+obj);
+		System.out.println("obj="+obj); // obj=[year=2021, month=10, day=1]
 	} // main
 
 	private static Object getFilledObjWithMap(Map<String, String> map, Class<?> clazz) throws Exception {
