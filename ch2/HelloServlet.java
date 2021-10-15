@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//@WebServlet(urlPatterns={"/hello222"}, loadOnStartup=1)
+//@WebServlet(urlPatterns={"/hello"}, loadOnStartup=1)
 	@WebServlet("/hello")
 	public class HelloServlet extends HttpServlet {
 		@Override
