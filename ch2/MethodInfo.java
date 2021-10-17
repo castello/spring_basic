@@ -8,7 +8,7 @@ public class MethodInfo {
 	public static void main(String[] args) throws Exception{
 
 		Class clazz = Class.forName("com.fastcampus.ch2.YoilTeller");
-		YoilTeller obj = (YoilTeller)clazz.newInstance();
+		Object obj = clazz.newInstance();
 		
 		Method[] methodArr = clazz.getDeclaredMethods();
 		
