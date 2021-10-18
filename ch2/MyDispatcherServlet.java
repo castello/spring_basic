@@ -29,7 +29,7 @@ public class MyDispatcherServlet extends HttpServlet {
 		
 		try {
 			Class clazz = Class.forName("com.fastcampus.ch2.YoilTellerMVC");
-			YoilTellerMVC obj = (YoilTellerMVC)clazz.newInstance();
+			Object obj = clazz.newInstance();
 			
       			// 1. main메서드의 정보를 얻는다.
 			Method main = clazz.getDeclaredMethod("main", int.class, int.class, int.class, Model.class);
