@@ -15,7 +15,7 @@
 <body>   
 person.getCar().getColor()=<%=person.getCar().getColor()%><br>
 person.getCar().getColor()=${person.getCar().getColor()}<br>
-person.getCar().getColor()=${person.car.color}<br>    
+person.car.color=${person.car.color}<br>    
 name=<%=request.getAttribute("name")%><br>   
 name=${requestScope.name}<br>
 name=${name}<br>
@@ -45,7 +45,7 @@ name ne "남궁성"=${name ne "남궁성"}<br>
 [실행결과]
 person.getCar().getColor()=red
 person.getCar().getColor()=red
-person.getCar().getColor()=red
+person.car.color=red
 name=남궁성
 name=남궁성
 name=남궁성
