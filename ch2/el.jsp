@@ -7,7 +7,6 @@
 	request.setAttribute("person", person);
 	request.setAttribute("name", "남궁성");   
 	request.setAttribute("list", new java.util.ArrayList());
-	
 %>
 <html>  
 <head>   
