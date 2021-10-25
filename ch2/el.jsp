@@ -42,5 +42,32 @@ name != "남궁성"=${name!="남궁성"}<br>
 name ne "남궁성"=${name ne "남궁성"}<br>  
 </body>
 </html>
-	
+
+[실행결과]
+person.getCar().getColor()=red
+person.getCar().getColor()=red
+person.getCar().getColor()=red
+name=남궁성
+name=남궁성
+name=남궁성
+id=asdf
+id=asdf
+id=asdf
+"1"+1 = 2
+"2">1 = true
+null =
+null+1 = 1
+null+null = 0
+"" + null = 0
+""-1 = -1
+empty null=true
+empty list=true
+null==0 = false
+null eq 0 = false
+null ne 0 = true
+name == "남궁성"=true
+name eq "남궁성"=true
+name.equals("남궁성")=true
+name != "남궁성"=false
+name ne "남궁성"=false
 	
