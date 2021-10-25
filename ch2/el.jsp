@@ -69,4 +69,3 @@ name != "남궁성"=false
 name eq "남궁성"=true
 name ne "남궁성"=false
 name.equals("남궁성")=true
-
