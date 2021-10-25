@@ -11,6 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 
+// 필터를 적용할 요청의 패턴 지정 - 모든 요청에 필터를 적용.
 @WebFilter(urlPatterns="/*")
 public class PerformanceFilter implements Filter {
 	@Override
