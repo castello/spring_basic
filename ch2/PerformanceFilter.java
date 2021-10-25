@@ -21,10 +21,13 @@ public class PerformanceFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
+		// 1. 전처리 작업
 		long startTime = System.currentTimeMillis();
+
+		// 2. 서블릿 또는 다음 필터를 호출
+		chain.doFilter(request, response); 
 		
-		chain.doFilter(request, response); // 서블릿 또는 다음 필더를 호출
-		
+		// 3. 후처리 작업
 		System.out.print("["+((HttpServletRequest)request).getRequestURI()+"]");
 		System.out.println(" 소요시간="+(System.currentTimeMillis()-startTime)+"ms");
 	}
