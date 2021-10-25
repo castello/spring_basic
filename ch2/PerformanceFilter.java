@@ -25,7 +25,7 @@ public class PerformanceFilter implements Filter {
 		// 1. 전처리 작업(선택)
 		long startTime = System.currentTimeMillis();
 
-		// 2. 서블릿 또는 다음 필터를 호출(필수)
+		// 2. 서블릿 또는 다음 필터를 호출
 		chain.doFilter(request, response); 
 		
 		// 3. 후처리 작업(선택)
