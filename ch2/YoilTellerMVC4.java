@@ -19,7 +19,7 @@ System.out.println("date="+date);
     	// 2. 유효성 검사 
     	if(!isValid(date)) {
             mv.setViewName("yoilError"); // 뷰의 이름을 지정 
-    		return mv;
+    	    return mv;
         }
     	
         // 3. 처리
