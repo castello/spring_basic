@@ -38,14 +38,14 @@ public class SetterCall {
 			
 			// map에 같은 이름의 key가 있으면 가져와서 setter호출 
 			Object value = map.get(name); // 못찾으면 value의 값은 null
-			Method method = null;
+			Method setter = null;
 			
 			try {   // map에 iv와 일치하는 키가 있을 때만, setter를 호출
 				if(value==null) continue;
 				
-				method = clazz.getDeclaredMethod(getSetterName(name), type); // setter의 정보 얻기	
-				System.out.println("method="+method);
-				method.invoke(obj, convertTo(value, type)); // obj의 setter를 호출
+				setter = clazz.getDeclaredMethod(getSetterName(name), type); // setter의 정보 얻기	
+				System.out.println("setter="+setter);
+				setter.invoke(obj, convertTo(value, type)); // obj의 setter를 호출
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -77,9 +77,9 @@ public class SetterCall {
 
 /*
 [실행결과]
-method=public void com.fastcampus.ch2.MyDate.setYear(int)
-method=public void com.fastcampus.ch2.MyDate.setMonth(int)
-method=public void com.fastcampus.ch2.MyDate.setDay(int)
+setter=public void com.fastcampus.ch2.MyDate.setYear(int)
+setter=public void com.fastcampus.ch2.MyDate.setMonth(int)
+setter=public void com.fastcampus.ch2.MyDate.setDay(int)
 [private int com.fastcampus.ch2.MyDate.year, private int com.fastcampus.ch2.MyDate.month, private int com.fastcampus.ch2.MyDate.day]
 obj=[year=2021, month=10, day=1]
  */
