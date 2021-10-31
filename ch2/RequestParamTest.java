@@ -67,15 +67,15 @@ public class RequestParamTest {
 
 	@RequestMapping("/requestParam8") 
 	public void main8(@RequestParam(required=false) int year) {   
-//		http://localhost/ch2/requestParam8        ---->> 500 java.lang.IllegalStateException: Optional int parameter 'year' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
-//		http://localhost/ch2/requestParam8?year   ---->> 400 Bad Request, nested exception is java.lang.NumberFormatException: For input string: "" 
+	//	http://localhost/ch2/requestParam8        ---->> 500 java.lang.IllegalStateException: Optional int parameter 'year' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+	//	http://localhost/ch2/requestParam8?year   ---->> 400 Bad Request, nested exception is java.lang.NumberFormatException: For input string: "" 
 		System.out.printf("[%s]year=[%s]%n", new Date(), year);
 	}
 	
 	@RequestMapping("/requestParam9") 
 	public void main9(@RequestParam(required=true) int year) {   
-//		http://localhost/ch2/requestParam9        ---->> 400 Bad Request, Required int parameter 'year' is not present
-//		http://localhost/ch2/requestParam9?year   ---->> 400 Bad Request, nested exception is java.lang.NumberFormatException: For input string: "" 
+	//	http://localhost/ch2/requestParam9        ---->> 400 Bad Request, Required int parameter 'year' is not present
+	//	http://localhost/ch2/requestParam9?year   ---->> 400 Bad Request, nested exception is java.lang.NumberFormatException: For input string: "" 
 		System.out.printf("[%s]year=[%s]%n", new Date(), year);
 	}
 	
