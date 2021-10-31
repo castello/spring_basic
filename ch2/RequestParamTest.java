@@ -81,8 +81,8 @@ public class RequestParamTest {
 	
 	@RequestMapping("/requestParam10")   
 	public void main10(@RequestParam(required=true, defaultValue="1") int year) {   
-//		http://localhost/ch2/requestParam10        ---->> year=1   
-//		http://localhost/ch2/requestParam10?year   ---->> year=1   
+	//	http://localhost/ch2/requestParam10        ---->> year=1   
+	//	http://localhost/ch2/requestParam10?year   ---->> year=1   
 		System.out.printf("[%s]year=[%s]%n", new Date(), year);
 	}
 
