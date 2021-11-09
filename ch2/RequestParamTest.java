@@ -97,9 +97,10 @@ public class RequestParamTest {
 	}
 
 	@RequestMapping("/requestParam11")   
-	public void main11(@RequestParam(required=false, defaultValue="1") int year) {   
+	public String main11(@RequestParam(required=false, defaultValue="1") int year) {   
 //		http://localhost/ch2/requestParam11        ---->> year=1   
 //		http://localhost/ch2/requestParam11?year   ---->> year=1   
 		System.out.printf("[%s]year=[%s]%n", new Date(), year);
+		return "yoil";
 	}
 } // class
