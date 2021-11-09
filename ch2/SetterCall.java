@@ -18,11 +18,11 @@ public class SetterCall {
 		Class<?> type = Class.forName("com.fastcampus.ch2.MyDate");
 
 		// MyDate인스턴스를 생성하고, map의 값으로 초기화한다. 
-		Object obj = getFilledObjWithMap(map, type);
+		Object obj = dataBind(map, type);
 		System.out.println("obj="+obj); // obj=[year=2021, month=10, day=1]
 	} // main
 
-	private static Object getFilledObjWithMap(Map<String, String> map, Class<?> clazz) throws Exception {
+	private static Object dataBind(Map<String, String> map, Class<?> clazz) throws Exception {
 		// 1. MyDate인스턴스 생성
 //		Object obj = clazz.newInstance(); // deprecated method
 		Object obj = clazz.getDeclaredConstructor().newInstance(new Object[0]);
@@ -38,14 +38,14 @@ public class SetterCall {
 			
 			// map에 같은 이름의 key가 있으면 가져와서 setter호출 
 			Object value = map.get(name); // 못찾으면 value의 값은 null
-			Method setter = null;
+			Method method = null;
 			
 			try {   // map에 iv와 일치하는 키가 있을 때만, setter를 호출
 				if(value==null) continue;
 				
-				setter = clazz.getDeclaredMethod(getSetterName(name), type); // setter의 정보 얻기	
-				System.out.println("setter="+setter);
-				setter.invoke(obj, convertTo(value, type)); // obj의 setter를 호출
+				method = clazz.getDeclaredMethod(getSetterName(name), type); // setter의 정보 얻기	
+				System.out.println("method="+method);
+				method.invoke(obj, convertTo(value, type)); // obj의 setter를 호출
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -77,9 +77,9 @@ public class SetterCall {
 
 /*
 [실행결과]
-setter=public void com.fastcampus.ch2.MyDate.setYear(int)
-setter=public void com.fastcampus.ch2.MyDate.setMonth(int)
-setter=public void com.fastcampus.ch2.MyDate.setDay(int)
+method=public void com.fastcampus.ch2.MyDate.setYear(int)
+method=public void com.fastcampus.ch2.MyDate.setMonth(int)
+method=public void com.fastcampus.ch2.MyDate.setDay(int)
 [private int com.fastcampus.ch2.MyDate.year, private int com.fastcampus.ch2.MyDate.month, private int com.fastcampus.ch2.MyDate.day]
 obj=[year=2021, month=10, day=1]
  */
