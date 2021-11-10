@@ -62,4 +62,3 @@ System.out.println("date="+date);
     	return (1<=month && month<=12) && (1<=day && day<=31); // 간단히 체크 
     }
 }
-  
