@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="EUC-KR">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
@@ -30,7 +30,6 @@
             padding: 0 10px;
             margin-bottom: 10px;
         }
-      
         label {
             width:300px;
             height:30px;
@@ -54,12 +53,12 @@
         }
 
         .msg {
+            height: 30px;
             text-align:center;
             font-size:16px;
             color:red;
             margin-bottom: 20px;
         }
-      
         .sns-chk {
             margin-top : 5px; 
         }
@@ -67,11 +66,9 @@
     <title>Register</title>
 </head>
 <body>
-   <form action="/ch2/register">
+   <form>
     <div class="title">Register</div>
-    <div class="msg">
-        <i class="fa fa-exclamation-circle"> 아이디를 입력하지 않으셨습니다.</i>            
-    </div> 
+    <div id="msg" class="msg"> </div> 
     <label for="">아이디</label>
     <input class="input-field" type="text" name="id" placeholder="8~12자리의 영대소문자와 숫자 조합">
     <label for="">비밀번호</label>
@@ -89,5 +86,25 @@
     </div>
     <button>회원 가입</button>
    </form> 
+   <script>
+       function formCheck(frm) {
+            var msg ='';
+
+            if(frm.id.value.length<3) {
+                setMessage('id의 길이는 3이상이어야 합니다.', frm.id);
+                return false;
+            }
+
+           return true;
+       }
+
+       function setMessage(msg, element){
+            document.getElementById("msg").innerHTML = `<i class="fa fa-exclamation-circle"> ${msg}</i>`;
+
+            if(element) {
+                element.select();
+            }
+       }
+   </script>
 </body>
 </html>
