@@ -85,7 +85,7 @@
             }
      
             function setMessage(msg, element){
-                 document.getElementById("msg").innerHTML = `<i class="fa fa-exclamation-circle"> ${'${msg}'}</i>`;
+                 document.getElementById("msg").innerHTML = `${'${msg}'}`;
      
                  if(element) {
                      element.select();
