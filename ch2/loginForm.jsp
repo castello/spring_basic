@@ -10,7 +10,6 @@
     <style>
        * { box-sizing:border-box; }
        a { text-decoration: none; }
-
         form {
             width:400px;
             height:500px;
@@ -24,7 +23,6 @@
             border: 1px solid rgb(89,117,196);
             border-radius: 10px;
         }
-
         input[type='text'], input[type='password'] {
             width: 300px;
             height: 40px;
@@ -33,7 +31,6 @@
             padding: 0 10px;
             margin-bottom: 10px;
         }
-
         button {
             background-color: rgb(89,117,196);
             color : white;
@@ -44,12 +41,10 @@
             border-radius: 5px;
             margin : 20px 0 30px 0;
         }
-
         #title {
             font-size : 50px;
             margin: 40px 0 30px 0;
         }
-
         #msg {
             height: 30px;
             text-align:center;
@@ -62,8 +57,7 @@
 <body>
     <form action="<c:url value='/login/login'/>" method="post" onsubmit="return formCheck(this);">
         <h3 id="title">Login</h3>
-        <div id="msg">
-        </div>
+        <div id="msg">${msg}</div>
         <input type="text" name="id" placeholder="이메일 입력" autofocus>
         <input type="password" name="pwd" placeholder="비밀번호">
         <button>로그인</button>
@@ -77,7 +71,7 @@
                  var msg ='';
      
                  if(frm.id.value.length<3) {
-                     setMessage('이메일의 길이는 3이상이어야 합니다.', frm.id);
+                     setMessage('id의 길이는 3이상이어야 합니다.', frm.id);
                      return false;
                  }
      
@@ -85,7 +79,7 @@
             }
      
             function setMessage(msg, element){
-                 document.getElementById("msg").innerHTML = `${'${msg}'}`;
+                 document.getElementById("msg").innerHTML = ` ${'${msg}'}`;
      
                  if(element) {
                      element.select();
