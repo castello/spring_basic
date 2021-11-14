@@ -64,7 +64,7 @@
         <h3 id="title">Login</h3>
         <div id="msg">
         </div>
-        <input type="text" name="id" placeholder="이메일 입력">
+        <input type="text" name="id" placeholder="이메일 입력" autofocus>
         <input type="password" name="pwd" placeholder="비밀번호">
         <button>로그인</button>
         <div>
