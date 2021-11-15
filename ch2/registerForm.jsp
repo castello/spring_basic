@@ -97,6 +97,11 @@
                 return false;
             }
 
+            if(frm.pwd.value.length<3) {
+                setMessage('pwd의 길이는 3이상이어야 합니다.', frm.pwd);
+                return false;
+            }           
+           
            return true;
        }
 
