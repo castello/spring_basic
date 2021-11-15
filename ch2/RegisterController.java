@@ -10,7 +10,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller // ctrl+shift+o 자동 임포트 
 public class RegisterController {
 //	@RequestMapping(value="/register/add", method=RequestMethod.GET) // 신규회원 가입
-	@RequestMapping("/register/add") // 신규회원 입력
+//	@RequestMapping("/register/add") // 신규회원 입력
 	@GetMapping("/register/add") // 4.3부터 추가
 	public String register() {
 		return "registerForm";  // WEB-INF/views/registerForm.jsp
