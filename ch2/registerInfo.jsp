@@ -12,6 +12,6 @@
 <h1>name=${param.name}</h1>
 <h1>email=${param.email}</h1>
 <h1>birth=${param.birth}</h1>
-<h1>sns=${param.sns}</h1>\
+<h1>sns=${param.sns}</h1>
 </body>
 </html>
