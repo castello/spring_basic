@@ -16,7 +16,7 @@ public class RequestMappingTest {
         System.out.println("urlpattern=/login/*");
     }
 
-    @RequestMapping("/login/**/tmp/*.do")   // /login/hello, /login/hi
+    @RequestMapping("/login/**/tmp/*.do")   // /login/tmp/hello.do, /login/aaa/tmp/hello.do
     public void test3(){
         System.out.println("urlpattern=/login/**/tmp/*.do");
     }
