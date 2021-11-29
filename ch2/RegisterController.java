@@ -10,7 +10,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller // ctrl+shift+o 자동 임포트 
 public class RegisterController {
 //	@RequestMapping(value="/register/add", method=RequestMethod.GET) // 신규회원 가입
-//	@RequestMapping("/register/add") // 신규회원 입력
 	@GetMapping("/register/add") // 4.3부터 추가
 	public String register() {
 		return "registerForm";  // WEB-INF/views/registerForm.jsp
@@ -18,11 +17,11 @@ public class RegisterController {
 	
 //	@RequestMapping(value="/register/save", method=RequestMethod.POST) // 신규회원 가입
 	@PostMapping("/register/save")
-	public String save(@ModelAttribute("user") User user, RedirectAttributes rttr) {
+	public String save(@ModelAttribute("user") User user, Model m) {
 		if(!isValid(user)) {
-			String msg = "id를 잘못입력하셨습니다.";
+			String msg = URLEncoder.encode("id를 잘못입력하셨습니다.", "utf-8");
 			
-			rttr.addFlashAttribute("msg", msg);
+			m.addAttribute("msg", msg);
 			return "redirect:/register/add"; // 신규회원 가입화면으로 이동(redirect)
 		}
 		
