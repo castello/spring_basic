@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="java.net.URLDecoder"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +72,11 @@
 <body>
    <form action="<c:url value="/register/save"/>" method="post" onsubmit="return formCheck(this)">
     <div class="title">Register</div>
-    <div id="msg" class="msg">${msg} </div> 
+    <div id="msg" class="msg">
+   	    <c:if test="${not empty param.msg}">
+	        <i class="fa fa-exclamation-circle"> ${URLDecoder.decode(param.msg)}</i>            
+	    </c:if>
+    </div> 
     <label for="">아이디</label>
     <input class="input-field" type="text" name="id" placeholder="8~12자리의 영대소문자와 숫자 조합">
     <label for="">비밀번호</label>
