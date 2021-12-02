@@ -30,22 +30,21 @@ public class LoginController {
 			
 			return "redirect:/login/login?msg="+msg;
 		}
-		// 2-2. id와 pwd가 일치하면,
 		
+		// 2-2. id와 pwd가 일치하면,
 		if(rememberId) {
-			// 쿠키를 생성
+		//     1. 쿠키를 생성
 			Cookie cookie = new Cookie("id", id); // ctrl+shift+o 자동 import
 //		       2. 응답에 저장
 			response.addCookie(cookie);
 		} else {
-			// 쿠키를 삭제
+// 		       1. 쿠키를 삭제
 			Cookie cookie = new Cookie("id", id); // ctrl+shift+o 자동 import
 			cookie.setMaxAge(0); // 쿠키를 삭제
-			//		       2. 응답에 저장
+//		       2. 응답에 저장
 			response.addCookie(cookie);
 		}
-		//     1. 쿠키를 생성
-//		       3. 홈으로 이동
+//		3. 홈으로 이동
 		return "redirect:/";
 	}
 
