@@ -33,7 +33,7 @@
     		</beans:property>
 		<beans:property name="statusCodes">
 			<beans:props>
-        			<beans:prop key="error400">404</beans:prop>
+        			<beans:prop key="error400">400</beans:prop>
 			</beans:props>
 		</beans:property>
   	</beans:bean>	
