@@ -17,7 +17,7 @@ import javax.servlet.http.*;
 @Controller
 public class HomeController {
 	@Autowired
-	ApplicationContext servletAC; // Servlet AC
+	WebApplicationContext servletAC; // Servlet AC
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, HttpServletRequest request, Model model) {
