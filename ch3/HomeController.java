@@ -39,12 +39,6 @@ public class HomeController {
 	}
 }
 /* [실행결과]
-rootAC.getBeanDefinitionNames() = []
-servletAC.getBeanDefinitionNames() = [mvcContentNegotiationManager, org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping, mvcCorsConfigurations, org.springframework.format.support.FormattingConversionServiceFactoryBean#0, org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter, mvcUriComponentsContributor, org.springframework.web.servlet.handler.MappedInterceptor#0, org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0, org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0, org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0, org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping, org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter, org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter, mvcHandlerMappingIntrospector, mvcResourceUrlProvider, org.springframework.web.servlet.handler.MappedInterceptor#1, mvcPathMatcher, mvcUrlPathHelper, org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0, org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0, org.springframework.web.servlet.view.InternalResourceViewResolver#0, car, door, engine, homeController, superEngine, turboEngine, org.springframework.context.annotation.internalConfigurationAnnotationProcessor, org.springframework.context.annotation.internalAutowiredAnnotationProcessor, org.springframework.context.annotation.internalRequiredAnnotationProcessor, org.springframework.context.annotation.internalCommonAnnotationProcessor, org.springframework.context.event.internalEventListenerProcessor, org.springframework.context.event.internalEventListenerFactory]
-rootAC.getBeanDefinitionCount() = 0
-servletAC.getBeanDefinitionCount() = 33
-servletAC.getParent()==rootAC = true
-ac = Root WebApplicationContext: startup date [Thu Jan 06 16:26:50 KST 2022]; root of context hierarchy
 webApplicationContext = Root WebApplicationContext: startup date [Thu Jan 06 16:26:50 KST 2022]; root of context hierarchy
 servletAC = WebApplicationContext for namespace 'appServlet-servlet': startup date [Thu Jan 06 16:26:51 KST 2022]; parent: Root WebApplicationContext
 rootAC.getBeanDefinitionNames() = []
