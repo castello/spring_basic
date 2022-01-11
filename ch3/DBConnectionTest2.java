@@ -21,7 +21,7 @@ public class DBConnectionTest2 {
 //        String DB_PASSWORD = "1234";
 //        String DB_DRIVER = "com.mysql.jdbc.Driver";
 //
-//        DriverManagerDataSource ds = new DriverManagerDataSource();
+//        DataSource ds = new DriverManagerDataSource();
 //        ds.setDriverClassName(DB_DRIVER);
 //        ds.setUrl(DB_URL);
 //        ds.setUsername(DB_USER);
