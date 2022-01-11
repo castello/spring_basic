@@ -19,7 +19,7 @@ public class DBConnectionTest {
 
         // 실행결과가 담긴 rs에서 한 줄씩 읽어서 출력
         while (rs.next()) {
-            String curDate = rs.getString(1);
+            String curDate = rs.getString(1);  // 읽어온 행의 첫번째 컬럼의 값을 String으로 읽어서 curDate에 저장
             System.out.println(curDate);
         }
     }
