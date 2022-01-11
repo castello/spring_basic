@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring/**/root-context.xml"})
 public class DBConnectionTest3 {
     @Autowired
-    DataSource ds;
+    DataSource ds; // 컨테이너로부터 자동 주입받는다.
 
     @Test
     public void jdbcConnectionTest() throws Exception {
