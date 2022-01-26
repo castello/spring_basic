@@ -12,15 +12,15 @@ import org.springframework.validation.Validator;
 
 
 public class GlobalValidator implements Validator {
-		@Override
-		public boolean supports(Class<?> clazz) {
-			return clazz != null;
-		}
-
-		@Override
-		public void validate(Object target, Errors errors) { 
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "id",  "required");
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "pwd", "required");
-		}
+	@Override
+	public boolean supports(Class<?> clazz) {
+		return clazz != null;
 	}
+
+	@Override
+	public void validate(Object target, Errors errors) { 
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "id",  "required");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "pwd", "required");
+	}
+}
 
