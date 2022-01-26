@@ -19,26 +19,8 @@ public class GlobalValidator implements Validator {
 
 		@Override
 		public void validate(Object target, Errors errors) { 
-			// target이 User타입인 경우의 검증.
-			if(target instanceof User) {
-				User user = (User)target;
-
-				String id = user.getId();
-				
-		//		if(id==null || "".equals(id.trim())) {
-		//			errors.rejectValue("id", "required");
-		//		}
-				ValidationUtils.rejectIfEmptyOrWhitespace(errors, "id",  "required");
-				ValidationUtils.rejectIfEmptyOrWhitespace(errors, "pwd", "required");
-				
-				if(id==null || id.length() <  5 || id.length() > 12) {
-					errors.rejectValue("id", "invalidLength");
-				}				
-			}
-			
-			// target이 다른 타입인 경우의 검증
-			// ...
-			
-		} // validate()
+			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "id",  "required");
+			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "pwd", "required");
+		}
 	}
 
