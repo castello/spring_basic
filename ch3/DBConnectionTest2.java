@@ -46,7 +46,7 @@ public class DBConnectionTest2 {
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/springbook?useUnicode=true&amp;characterEncoding=utf8"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/springbasic?useUnicode=true&amp;characterEncoding=utf8"></property>
 		<property name="username" value="asdf"></property>
 		<property name="password" value="1234"></property>
 	</bean>
