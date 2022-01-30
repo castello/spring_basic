@@ -14,7 +14,7 @@ public class DBConnectionTest2 {
     @Test
     public void jdbcConnectionTest() throws Exception {
 //        // 스키마의 이름(springbasic)이 다른 경우 알맞게 변경
-//        String DB_URL = "jdbc:mysql://localhost:3306/springbook?useUnicode=true&characterEncoding=utf8";
+//        String DB_URL = "jdbc:mysql://localhost:3306/springbasic?useUnicode=true&characterEncoding=utf8";
 //
 //        // DB의 userid와 pwd를 알맞게 변경
 //        String DB_USER = "asdf";
