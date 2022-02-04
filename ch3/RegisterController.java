@@ -25,10 +25,9 @@ public class RegisterController {
 	public void toDate(WebDataBinder binder) {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(df, false));
-		binder.registerCustomEditor(String[].class, "hobby", new StringArrayPropertyEditor("#"));
 		binder.setValidator(new UserValidator()); // UserValidator를 WebDataBinder의 로컬 validator로 등록 
-		List<Validator> validatorList = binder.getValidators();
-		System.out.println("validatorList="+validatorList);
+	//	List<Validator> validatorList = binder.getValidators();
+	//	System.out.println("validatorList="+validatorList);
 	}
 	
 	@GetMapping("/add")
@@ -36,7 +35,7 @@ public class RegisterController {
 		return "registerForm"; // WEB-INF/views/registerForm.jsp
 	}
 	
-	@PostMapping("/save")  // 4.3부터 
+	@PostMapping("/add")
 	public String save(@Valid User user, BindingResult result, Model m) throws Exception {
 		System.out.println("result="+result);
 		System.out.println("user="+user);
