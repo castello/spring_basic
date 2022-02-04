@@ -23,9 +23,10 @@ public class RegisterController {
 	
 	@InitBinder
 	public void toDate(WebDataBinder binder) {
-//		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-//		binder.registerCustomEditor(Date.class, new CustomDateEditor(df, false));
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(df, false));
 		binder.registerCustomEditor(String[].class, "hobby", new StringArrayPropertyEditor("#"));
+		binder.setValidator(new UserValidator()); // UserValidator를 WebDataBinder의 로컬 validator로 등록 
 		List<Validator> validatorList = binder.getValidators();
 		System.out.println("validatorList="+validatorList);
 	}
