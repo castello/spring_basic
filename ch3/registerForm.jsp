@@ -35,6 +35,7 @@
             padding: 0 10px;
             margin-bottom: 10px;
         }
+        
         label {
             width:300px;
             height:30px;
@@ -64,6 +65,7 @@
             color:red;
             margin-bottom: 20px;
         }
+        
         .sns-chk {
             margin-top : 5px; 
         }
