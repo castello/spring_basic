@@ -1,4 +1,4 @@
-package com.fastcampus.ch2;
+package com.fastcampus.ch3;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
