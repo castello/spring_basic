@@ -7,47 +7,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Calendar;
 import java.util.Date;
 
 public class UserDao {
     @Autowired
     DataSource ds;
     final int FAIL = 0;
-
-    // 매개변수로 받은 사용자 정보로 user_info테이블을 update하는 메서드
-    public int updateUser(User user) {
-        int rowCnt = FAIL; //  insert, delete, update
-
-        Connection conn = null;
-        PreparedStatement pstmt = null;
-
-        String sql = "update user_info " +
-                "set pwd = ?, name=?, email=?, birth =?, sns=?, reg_date=? " +
-                "where id = ? ";
-        try {
-            conn = ds.getConnection();
-            pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
-            pstmt.setString(1, user.getPwd());
-            pstmt.setString(2, user.getName());
-            pstmt.setString(3, user.getEmail());
-            pstmt.setDate(4, new java.sql.Date(user.getBirth().getTime()));
-            pstmt.setString(5, user.getSns());
-            pstmt.setTimestamp(6, new java.sql.Timestamp(user.getReg_date().getTime()));
-            pstmt.setString(7, user.getId());
-
-            rowCnt = pstmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return FAIL;
-        } finally {
-            // close()를 호출하다가 예외가 발생할 수 있으므로, try-catch로 감싸야함.
-            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
-            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
-        }
-
-        return rowCnt;
-    }
 
     public int deleteUser(String id) {
         int rowCnt = FAIL; //  insert, delete, update
@@ -69,8 +34,9 @@ public class UserDao {
             return FAIL;
         } finally {
             // close()를 호출하다가 예외가 발생할 수 있으므로, try-catch로 감싸야함.
-            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
-            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
+//            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
+//            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
+            close(pstmt, conn);
         }
     }
 
@@ -105,22 +71,13 @@ public class UserDao {
         } finally {
             // close()를 호출하다가 예외가 발생할 수 있으므로, try-catch로 감싸야함.
             // close()의 호출순서는 생성된 순서의 역순
-            try { if(rs!=null)    rs.close();    } catch (SQLException e) { e.printStackTrace();}
-            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
-            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
+//            try { if(rs!=null)    rs.close();    } catch (SQLException e) { e.printStackTrace();}
+//            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
+//            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
+            close(rs, pstmt, conn);
         }
 
         return user;
-    }
-
-    // 테스트할 때만 사용하는 메서드라서 private
-    private void deleteAll() throws Exception {
-        Connection conn = ds.getConnection();
-
-        String sql = "delete from user_info ";
-
-        PreparedStatement pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
-        pstmt.executeUpdate(); //  insert, delete, update
     }
 
     // 사용자 정보를 user_info테이블에 저장하는 메서드
@@ -149,8 +106,55 @@ public class UserDao {
             e.printStackTrace();
             return FAIL;
         } finally {
-            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
-            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
+            close(pstmt, conn);
         }
+    }
+
+    // 매개변수로 받은 사용자 정보로 user_info테이블을 update하는 메서드
+    public int updateUser(User user) {
+        int rowCnt = FAIL; //  insert, delete, update
+
+//        Connection conn = null;
+//        PreparedStatement pstmt = null;
+
+        String sql = "update user_info " +
+                     "set pwd = ?, name=?, email=?, birth =?, sns=?, reg_date=? " +
+                     "where id = ? ";
+
+        // try-with-resources - since jdk7
+        try (
+            Connection conn = ds.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
+        ){
+            pstmt.setString(1, user.getPwd());
+            pstmt.setString(2, user.getName());
+            pstmt.setString(3, user.getEmail());
+            pstmt.setDate(4, new java.sql.Date(user.getBirth().getTime()));
+            pstmt.setString(5, user.getSns());
+            pstmt.setTimestamp(6, new java.sql.Timestamp(user.getReg_date().getTime()));
+            pstmt.setString(7, user.getId());
+
+            rowCnt = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return FAIL;
+        }
+
+        return rowCnt;
+    }
+
+    // 테스트할 때만 사용하는 메서드라서 private
+    private void deleteAll() throws Exception {
+        Connection conn = ds.getConnection();
+
+        String sql = "delete from user_info ";
+
+        PreparedStatement pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
+        pstmt.executeUpdate(); //  insert, delete, update
+    }
+
+    private void close(AutoCloseable... acs) {
+        for(AutoCloseable ac :acs)
+            try { if(ac!=null) ac.close(); } catch(Exception e) { e.printStackTrace(); }
     }
 }
