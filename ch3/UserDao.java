@@ -36,7 +36,7 @@ public class UserDao {
             // close()를 호출하다가 예외가 발생할 수 있으므로, try-catch로 감싸야함.
 //            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
 //            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
-            close(pstmt, conn);
+            close(pstmt, conn); //     private void close(AutoCloseable... acs) {
         }
     }
 
@@ -74,7 +74,7 @@ public class UserDao {
 //            try { if(rs!=null)    rs.close();    } catch (SQLException e) { e.printStackTrace();}
 //            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
 //            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
-            close(rs, pstmt, conn);
+            close(rs, pstmt, conn);  //     private void close(AutoCloseable... acs) {
         }
 
         return user;
@@ -106,7 +106,7 @@ public class UserDao {
             e.printStackTrace();
             return FAIL;
         } finally {
-            close(pstmt, conn);
+            close(pstmt, conn);  //     private void close(AutoCloseable... acs) {
         }
     }
 
