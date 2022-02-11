@@ -24,14 +24,5 @@
 	<context:component-scan base-package="com.fastcampus.ch4"/>
 
 	<view-controller path="/" view-name="index"/>
-
-	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-		<beans:property name="basenames">
-			<beans:list>
-				<beans:value>error_message</beans:value> <!-- /src/main/resources/error_message.properties -->
-			</beans:list>
-		</beans:property>
-		<beans:property name="defaultEncoding" value="UTF-8"/>
-	</beans:bean>
 	
 </beans:beans>
