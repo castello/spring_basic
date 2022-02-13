@@ -143,8 +143,7 @@ public class UserDao {
         return rowCnt;
     }
 
-    // 테스트할 때만 사용하는 메서드라서 private
-    private void deleteAll() throws Exception {
+    public void deleteAll() throws Exception {
         Connection conn = ds.getConnection();
 
         String sql = "delete from user_info ";
