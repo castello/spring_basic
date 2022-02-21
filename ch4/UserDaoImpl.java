@@ -12,57 +12,39 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
-//@Component - @Controller, @Repository, @Service, @ControllerAdvice
 @Repository
 public class UserDaoImpl implements UserDao {
     @Autowired
     DataSource ds;
 
-    final int FAIL = 0;
-
     @Override
-    public int deleteUser(String id) {
-        int rowCnt = FAIL; //  insert, delete, update
+    public int deleteUser(String id) throws Exception {
+        int rowCnt = 0;
+        String sql = "DELETE FROM user_info WHERE id= ? ";
 
-        Connection conn = null;
-        PreparedStatement pstmt = null;
-
-        String sql = "delete from user_info where id= ? ";
-
-        try {
-            conn = ds.getConnection();
-            pstmt = conn.prepareStatement(sql);
+        try (  // try-with-resources - since jdk7
+            Connection conn = ds.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+        ){
             pstmt.setString(1, id);
-//        int rowCnt = pstmt.executeUpdate(); //  insert, delete, update
-//        return rowCnt;
             return pstmt.executeUpdate(); //  insert, delete, update
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return FAIL;
-        } finally {
-            // close()를 호출하다가 예외가 발생할 수 있으므로, try-catch로 감싸야함.
-//            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
-//            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
-            close(pstmt, conn); //     private void close(AutoCloseable... acs) {
+//      } catch (Exception e) {
+//          e.printStackTrace();
+//          throw e;
         }
     }
 
     @Override
-    public User selectUser(String id) {
+    public User selectUser(String id) throws Exception {
         User user = null;
+        String sql = "SELECT * FROM user_info WHERE id= ? ";
 
-        Connection conn = null;
-        PreparedStatement pstmt = null;
-        ResultSet rs = null;
-
-        String sql = "select * from user_info where id= ? ";
-
-        try {
-            conn = ds.getConnection();
-            pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
+        try (
+            Connection conn = ds.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery(); //  select
+        ){
             pstmt.setString(1, id);
-
-            rs = pstmt.executeQuery(); //  select
 
             if (rs.next()) {
                 user = new User();
@@ -74,15 +56,6 @@ public class UserDaoImpl implements UserDao {
                 user.setSns(rs.getString(6));
                 user.setReg_date(new Date(rs.getTimestamp(7).getTime()));
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            // close()를 호출하다가 예외가 발생할 수 있으므로, try-catch로 감싸야함.
-            // close()의 호출순서는 생성된 순서의 역순
-//            try { if(rs!=null)    rs.close();    } catch (SQLException e) { e.printStackTrace();}
-//            try { if(pstmt!=null) pstmt.close(); } catch (SQLException e) { e.printStackTrace();}
-//            try { if(conn!=null)  conn.close();  } catch (SQLException e) { e.printStackTrace();}
-            close(rs, pstmt, conn);  //     private void close(AutoCloseable... acs) {
         }
 
         return user;
@@ -90,19 +63,14 @@ public class UserDaoImpl implements UserDao {
 
     // 사용자 정보를 user_info테이블에 저장하는 메서드
     @Override
-    public int insertUser(User user) {
-        int rowCnt = FAIL;
+    public int insertUser(User user) throws Exception {
+        int rowCnt = 0;
+        String sql = "INSERT INTO user_info VALUES (?,?,?,?,?,?, now()) ";
 
-        Connection conn = null;
-        PreparedStatement pstmt = null;
-
-//        insert into user_info (id, pwd, name, email, birth, sns, reg_date)
-//        values ('asdf22', '1234', 'smith', 'aaa@aaa.com', '2022-01-01', 'facebook', now());
-        String sql = "insert into user_info values (?, ?, ?, ?,?,?, now()) ";
-
-        try {
-            conn = ds.getConnection();
-            pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
+        try(
+            Connection conn = ds.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
+        ){
             pstmt.setString(1, user.getId());
             pstmt.setString(2, user.getPwd());
             pstmt.setString(3, user.getName());
@@ -110,31 +78,22 @@ public class UserDaoImpl implements UserDao {
             pstmt.setDate(5, new java.sql.Date(user.getBirth().getTime()));
             pstmt.setString(6, user.getSns());
 
-            return pstmt.executeUpdate(); //  insert, delete, update;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return FAIL;
-        } finally {
-            close(pstmt, conn);  //     private void close(AutoCloseable... acs) {
+            return pstmt.executeUpdate();
         }
     }
 
     // 매개변수로 받은 사용자 정보로 user_info테이블을 update하는 메서드
     @Override
-    public int updateUser(User user) {
-        int rowCnt = FAIL; //  insert, delete, update
+    public int updateUser(User user) throws Exception {
+        int rowCnt = 0;
 
-//        Connection conn = null;
-//        PreparedStatement pstmt = null;
+        String sql = "UPDATE user_info " +
+                     "SET pwd = ?, name=?, email=?, birth =?, sns=?, reg_date=? " +
+                     "WHERE id = ? ";
 
-        String sql = "update user_info " +
-                "set pwd = ?, name=?, email=?, birth =?, sns=?, reg_date=? " +
-                "where id = ? ";
-
-        // try-with-resources - since jdk7
         try (
-                Connection conn = ds.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
+            Connection conn = ds.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
         ){
             pstmt.setString(1, user.getPwd());
             pstmt.setString(2, user.getName());
@@ -145,25 +104,33 @@ public class UserDaoImpl implements UserDao {
             pstmt.setString(7, user.getId());
 
             rowCnt = pstmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return FAIL;
         }
 
         return rowCnt;
     }
 
-    public void deleteAll() throws Exception {
-        Connection conn = ds.getConnection();
+    @Override
+    public int count() throws Exception {
+        String sql = "SELECT count(*) FROM user_info ";
 
-        String sql = "delete from user_info ";
+        try(
+            Connection conn = ds.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery();
+        ){
+            rs.next();
+            int result = rs.getInt(1);
 
-        PreparedStatement pstmt = conn.prepareStatement(sql); // SQL Injection공격, 성능향상
-        pstmt.executeUpdate(); //  insert, delete, update
+            return result;
+        }
     }
 
-    private void close(AutoCloseable... acs) {
-        for(AutoCloseable ac :acs)
-            try { if(ac!=null) ac.close(); } catch(Exception e) { e.printStackTrace(); }
+    public void deleteAll() throws Exception {
+        try (Connection conn = ds.getConnection();)
+        {
+            String sql = "DELETE FROM user_info ";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.executeUpdate();
+        }
     }
 }
