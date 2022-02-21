@@ -74,7 +74,7 @@ public class UserDaoImpl implements UserDao {
                 user.setReg_date(new Date(rs.getTimestamp(7).getTime()));
             }
         } catch (SQLException e) {
-            return null;
+            e.printStackTrace();
         } finally {
             // close()를 호출하다가 예외가 발생할 수 있으므로, try-catch로 감싸야함.
             // close()의 호출순서는 생성된 순서의 역순
