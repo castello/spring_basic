@@ -82,7 +82,6 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
-    // 매개변수로 받은 사용자 정보로 user_info테이블을 update하는 메서드
     @Override
     public int updateUser(User user) throws Exception {
         int rowCnt = 0;
