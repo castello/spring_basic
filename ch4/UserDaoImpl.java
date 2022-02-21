@@ -152,7 +152,6 @@ public class UserDaoImpl implements UserDao {
         return rowCnt;
     }
 
-    // 테스트할 때만 사용하는 메서드라서 private
     public void deleteAll() throws Exception {
         Connection conn = ds.getConnection();
 
