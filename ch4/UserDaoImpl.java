@@ -125,6 +125,7 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
+    @Override
     public void deleteAll() throws Exception {
         try (Connection conn = ds.getConnection();)
         {
