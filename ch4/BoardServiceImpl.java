@@ -14,9 +14,9 @@ public class BoardServiceImpl implements BoardService {
     BoardDao boardDao;
 
     @Override
-    public BoardDto read(Integer bno) throws Exception { // @Transactional붙여야 하나... 이거 없이 rollback잘되는지 볼 것.
+    public BoardDto read(Integer bno) throws Exception { 
         BoardDto boardDto = boardDao.select(bno);
-        boardDao.increaseViewCnt(bno); // bno가 유효하지 않으면? 결과가 0. 아무 변화 없으니 괜춘. 나중에 댓글에서나 주의
+        boardDao.increaseViewCnt(bno); 
 
         return boardDto;
     }
@@ -35,8 +35,6 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public int remove(Integer bno, String writer) throws Exception {
-        // 삭제할 때 권한 체크하고, 삭제 실패시 메시지 보여줄 방법. 어디로 이동?
-        // 일단 기본 작업만 처리하고 나머지 부분은 보완하는 식으로
         BoardDto boardDto = boardDao.select(bno);
         if(pemissionCheck(writer, boardDto))
             return boardDao.delete(bno);
@@ -44,7 +42,6 @@ public class BoardServiceImpl implements BoardService {
     }
 
     private boolean pemissionCheck(String writer, BoardDto boardDto) {
-        // 작성자 또는 관리자인 경우만
         return boardDto.getWriter().equals(writer);
     }
 
