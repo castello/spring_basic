@@ -1,4 +1,4 @@
-package com.fastcampus.ch3;
+package com.fastcampus.ch4;
 
 public interface UserDao {
     int deleteUser(String id);
