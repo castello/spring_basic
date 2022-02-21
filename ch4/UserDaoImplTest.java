@@ -21,7 +21,7 @@ public class UserDaoImplTest {
 
     @Before // 각 테스트가 수행되기 직전에 이 메서드가 실행된다.
     public void init() {
-        cal = Calendar.getInstance();
+        cal = Calendar.getInstance();   
         cal.clear();
         cal.set(2021, 1, 1);
     }
@@ -30,9 +30,11 @@ public class UserDaoImplTest {
     public void insertUser() throws Exception {
         userDao.deleteAll();
         assertTrue(userDao.count()==0);
+        
         User user = new User("asdf", "1234", "abc", "aaa@aaa.com", new Date(cal.getTimeInMillis()), "fb", new Date());
         assertTrue(userDao.insertUser(user)==1);
         assertTrue(userDao.count()==1);
+        
         User user2 = userDao.selectUser(user.getId());
         assertTrue(user.equals(user2));
 
@@ -48,12 +50,15 @@ public class UserDaoImplTest {
     public void deleteUser() throws Exception {
         userDao.deleteAll();
         assertTrue(userDao.count()==0);
+        
         User user = new User("asdf", "1234", "abc", "aaa@aaa.com", new Date(cal.getTimeInMillis()), "fb", new Date());
         assertTrue(userDao.insertUser(user)==1);
         assertTrue(userDao.count()==1);
+        
         User user2 = userDao.selectUser(user.getId());
         assertTrue(user.equals(user2));
         assertTrue(userDao.deleteUser(user.getId())==1);
+        
         user = userDao.selectUser("asdf");
         assertTrue(user==null);
         assertTrue(userDao.count()==0);
@@ -63,10 +68,13 @@ public class UserDaoImplTest {
     public void selectUser() throws Exception {
         userDao.deleteAll();
         assertTrue(userDao.count()==0);
+        
         User user = new User("asdf", "1234", "abc", "aaa@aaa.com", new Date(cal.getTimeInMillis()), "fb", new Date());
         assertTrue(userDao.insertUser(user)==1);
+        
         User user2 = userDao.selectUser(user.getId());
         assertTrue(user.equals(user2));
+        
         user2 = userDao.selectUser("aaaaaaa");
         assertTrue(user2==null);
     }
