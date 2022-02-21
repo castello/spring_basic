@@ -1,4 +1,4 @@
-package com.fastcampus.ch4;
+package com.fastcampus.ch4.controller;
 
 import java.net.URLEncoder;
 
@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.fastcampus.ch4.dao.*;
+import com.fastcampus.ch4.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -69,11 +71,16 @@ public class LoginController {
     }
 
     private boolean loginCheck(String id, String pwd) {
-        User user = userDao.selectUser(id);
+        User user = null;
 
-        if(user==null) return false;
+        try {
+            user = userDao.selectUser(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
 
-        return user.getPwd().equals(pwd);
+        return user!=null && user.getPwd().equals(pwd);
 //        return "asdf".equals(id) && "1234".equals(pwd);
     }
 }
