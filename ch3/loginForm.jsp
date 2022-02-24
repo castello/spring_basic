@@ -76,7 +76,7 @@
         </div>
         <script>
             function formCheck(frm) {
-                 var msg ='';
+                 let msg ='';
      
                  if(frm.id.value.length==0) {
                      setMessage('id를 입력해주세요.', frm.id);
