@@ -16,7 +16,8 @@ public class RegisterController {
 	}
 	
 //	@RequestMapping(value="/register/save", method=RequestMethod.POST) // 신규회원 가입
-	@PostMapping("/register/save")
+// 	@PostMapping("/register/save")
+	@PostMapping("/register/add")
 	public String save(@ModelAttribute("user") User user, Model m) {
 		if(!isValid(user)) {
 			String msg = URLEncoder.encode("id를 잘못입력하셨습니다.", "utf-8");
