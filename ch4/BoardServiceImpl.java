@@ -35,14 +35,7 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public int remove(Integer bno, String writer) throws Exception {
-        BoardDto boardDto = boardDao.select(bno);
-        if(pemissionCheck(writer, boardDto))
-            return boardDao.delete(bno);
-        return 0;
-    }
-
-    private boolean pemissionCheck(String writer, BoardDto boardDto) {
-        return boardDto.getWriter().equals(writer);
+        return boardDao.delete(bno, writer);
     }
 
     @Override
