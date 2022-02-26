@@ -14,23 +14,8 @@ public class BoardServiceImpl implements BoardService {
     BoardDao boardDao;
 
     @Override
-    public BoardDto read(Integer bno) throws Exception { 
-        BoardDto boardDto = boardDao.select(bno);
-        boardDao.increaseViewCnt(bno); 
-
-        return boardDto;
-    }
-
-    @Override
-    public int modify(BoardDto boardDto) throws Exception {
-//        throw new Exception("error in purpose");
-        return boardDao.update(boardDto);
-    }
-
-    @Override
-    public int write(BoardDto boardDto) throws Exception {
-//        throw new Exception("error in purpose");
-        return boardDao.insert(boardDto);
+    public int getCount() throws Exception {
+            return boardDao.count();
     }
 
     @Override
@@ -39,32 +24,30 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public List<BoardDto> getPage(Page page) {
-        try {
-            return boardDao.selectPage(page);
-        } catch(Exception e) {
-            e.printStackTrace();
-            return Collections.emptyList();
-        }
+    public int write(BoardDto boardDto) throws Exception {
+        return boardDao.insert(boardDto);
     }
 
     @Override
-    public List<BoardDto> getList() {
-        try {
-            return boardDao.selectAll();
-        } catch(Exception e) {
-            e.printStackTrace();
-            return Collections.emptyList();
-        }
+    public List<BoardDto> getList() throws Exception {
+        return boardDao.selectAll();
     }
 
     @Override
-    public int getCount() {
-        try {
-            return boardDao.count();
-        } catch(Exception e) {
-            e.printStackTrace();
-            return 0;
-        }
+    public BoardDto read(Integer bno) throws Exception {
+        BoardDto boardDto = boardDao.select(bno);
+        boardDao.increaseViewCnt(bno);
+
+        return boardDto;
+    }
+
+    @Override
+    public List<BoardDto> getPage(Map map) throws Exception {
+        return boardDao.selectPage(map);
+    }
+
+    @Override
+    public int modify(BoardDto boardDto) throws Exception {
+        return boardDao.update(boardDto);
     }
 }
