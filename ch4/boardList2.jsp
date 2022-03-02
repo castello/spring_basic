@@ -190,11 +190,11 @@
 <div style="text-align:center">
   <div class="board-container">
     <div class="search-container">
-      <form action="<c:url value="/board/searchList"/>" class="search-form" method="get">
-        <select class="search-option" name="searchOption">
-          <option value="A" ${param.searchOption=='A' ? "selected" : ""}>제목+내용</option>
-          <option value="T" ${param.searchOption=='T' ? "selected" : ""}>제목만</option>
-          <option value="W" ${param.searchOption=='W' ? "selected" : ""}>작성자</option>
+      <form action="<c:url value="/board/list"/>" class="search-form" method="get">
+        <select class="search-option" name="option">
+          <option value="A" ${option=='A' ? "selected" : ""}>제목+내용</option>
+          <option value="T" ${option=='T' ? "selected" : ""}>제목만</option>
+          <option value="W" ${option=='W' ? "selected" : ""}>작성자</option>
         </select>
 
         <input type="text" name="keyword" class="search-input" type="text" value="${param.keyword}" placeholder="검색어를 입력해주세요">
