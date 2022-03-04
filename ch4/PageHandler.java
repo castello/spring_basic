@@ -40,8 +40,8 @@ public class PageHandler {
         this.showNext = endPage!=totalPage;
     }
 
-    void print() { // String.join()을 써서 변경?
-        System.out.println("curPage="+ sc.getPage());
+    void print() { 
+        System.out.println("page="+ sc.getPage());
         System.out.print(showPrev? "PREV " : "");
 
         for(int i=beginPage;i<=endPage;i++) {
