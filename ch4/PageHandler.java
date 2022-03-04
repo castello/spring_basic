@@ -39,7 +39,21 @@ public class PageHandler {
         this.showPrev = beginPage!=1;
         this.showNext = endPage!=totalPage;
     }
+    
+    public String getQueryString() {
+        return getQueryString(this.sc.getPage());
+    }
 
+    public String getQueryString(Integer page) {
+        // ?page=10&pageSize=10&option=A&keyword=title
+        return UriComponentsBuilder.newInstance()
+                .queryParam("page",     page)
+                .queryParam("pageSize", sc.getPageSize())
+                .queryParam("option",   sc.getOption())
+                .queryParam("keyword",  sc.getKeyword())
+                .build().toString();
+    }
+    
     void print() { 
         System.out.println("page="+ sc.getPage());
         System.out.print(showPrev? "PREV " : "");
