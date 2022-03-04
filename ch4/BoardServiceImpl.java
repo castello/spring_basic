@@ -4,7 +4,6 @@ import com.fastcampus.ch4.dao.*;
 import com.fastcampus.ch4.domain.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
-import org.springframework.transaction.annotation.*;
 
 import java.util.*;
 
@@ -15,7 +14,7 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public int getCount() throws Exception {
-            return boardDao.count();
+        return boardDao.count();
     }
 
     @Override
@@ -49,5 +48,15 @@ public class BoardServiceImpl implements BoardService {
     @Override
     public int modify(BoardDto boardDto) throws Exception {
         return boardDao.update(boardDto);
+    }
+
+    @Override
+    public int getSearchResultCnt(SearchCondition sc) throws Exception {
+        return boardDao.searchResultCnt(sc);
+    }
+
+    @Override
+    public List<BoardDto> getSearchResultPage(SearchCondition sc) throws Exception {
+        return boardDao.searchSelectPage(sc);
     }
 }
