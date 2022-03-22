@@ -381,7 +381,7 @@ textarea {
             $("#btn-write-modify").click(function(){
                 // 1. 변경된 내용을 서버로 전송
                 // 2. 모달 창을 닫는다. 
-                $("#modalWin").css("display","none");
+                $(".close").trigger("click");
             });
 
             $(".close").click(function(){
