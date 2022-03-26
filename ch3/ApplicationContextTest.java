@@ -82,10 +82,10 @@ ac.containsBeanDefinition("car") = true
 ac.containsBean("car") = true
 ac.getType("car") = class com.fastcampus.ch3.Car
 ac.isSingleton("car") = true
-ac.isSingleton("car") = false
+ac.isPrototype("car") = false
 ac.isPrototype("door") = true
 ac.isTypeMatch("car", Car.class) = true
 ac.findAnnotationOnBean("car", Component.class) = @org.springframework.stereotype.Component(value="")
 ac.getBeanNamesForAnnotation(Component.class) = [car, door, engine, superEngine, turboEngine]
-ac.getBeanNamesForType(Car.class) = [engine, superEngine, turboEngine]
+ac.getBeanNamesForType(Engine.class) = [engine, superEngine, turboEngine]
 */
