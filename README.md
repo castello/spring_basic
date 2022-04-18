@@ -119,10 +119,15 @@
 - **STS 3.9.17**  
 **Windows** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-win32-x86_64.zip  
 **MacOS** - https://download.springsource.com/release/STS/3.9.17.RELEASE/dist/e4.20/spring-tool-suite-3.9.17.RELEASE-e4.20.0-macosx-cocoa-x86_64.dmg  
+**MacOS M1** - https://www.jetbrains.com/idea/download/download-thanks.html?platform=macM1  
+[참고] MocOS M1의 경우 STS3가 아닌 STS4를 설치하고, 아래 경로의 ch2.zip을 다운로드 받아서 import해야함.
+      https://github.com/castello/spring_basic/blob/main/download/ch2.zip
 
 - **IntelliJ**   
 **Windows** - https://www.jetbrains.com/idea/download/#section=windows  
 **MacOS** - https://www.jetbrains.com/idea/download/#section=mac  
+**MacOS M1** - https://www.jetbrains.com/idea/download/download-thanks.html?platform=macM1  
+
 [참고] IntelliJ 학생 라이센스 - https://www.jetbrains.com/shop/eform/students  
 <br>
 
