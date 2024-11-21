@@ -91,7 +91,7 @@ public class RequestParamTest {
 	@RequestMapping("/requestParam10")   
 	public String main10(@RequestParam(required=true, defaultValue="1") int year) {   
 	//	http://localhost/ch2/requestParam10        ---->> year=1   
-	//	http://localhost/ch2/requestParam10?year   ---->> year=1   
+	//	http://localhost/ch2/requestParam10?year   ---->> 400 Bad Request, nested exception is java.lang.NumberFormatException: For input string: ""    
 		System.out.printf("[%s]year=[%s]%n", new Date(), year);
 		return "yoil";
 	}
@@ -99,7 +99,7 @@ public class RequestParamTest {
 	@RequestMapping("/requestParam11")   
 	public String main11(@RequestParam(required=false, defaultValue="1") int year) {   
 //		http://localhost/ch2/requestParam11        ---->> year=1   
-//		http://localhost/ch2/requestParam11?year   ---->> year=1   
+//		http://localhost/ch2/requestParam11?year   ---->> 400 Bad Request, nested exception is java.lang.NumberFormatException: For input string: ""    
 		System.out.printf("[%s]year=[%s]%n", new Date(), year);
 		return "yoil";
 	}
